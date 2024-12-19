@@ -21,6 +21,7 @@ gem "rake"
 gem "tzinfo-data"
 gem "wdm"
 gem "webrick"
+gem "faraday-retry"
 
 group :jekyll_plugins do
   gem "jekyll-redirect-from"

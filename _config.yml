@@ -1,22 +1,99 @@
-###########
+source: .
+destination: ./_site
+# collections_dir: .
+plugins_dir: _plugins # takes an array of strings and loads plugins in that order
+layouts_dir: _layouts
+data_dir: _data
+includes_dir: _includes
+# sass:
+#   sass_dir: _sass
+collections:
+  my_tags:
+    output: true
+    permalink: /tagged/:slug/
+  pages:
+    output: false
+    permalink: /pages/:path
+  papershelf:
+    output: true
+    permalink: /papershelf/:path
+  posts:
+    output: true
+    permalink: /posts/:path
 
-title: anshdavid.com
-description: What I have been upto...
-baseurl: "" #"/jekyllBear" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
-# host: 0.0.0.0
+# Handling Reading
+safe: false
+include: [".htaccess", data, my_tags, pages, papershelf, posts]
+exclude:
+  [
+    "Gemfile",
+    "Gemfile.lock",
+    "node_modules",
+    "vendor/bundle/",
+    "vendor/cache/",
+    "vendor/gems/",
+    "vendor/ruby/",
+    README.md,
+    LICENSE.md,
+    vendor,
+    references,
+  ]
+keep_files: [".git", ".svn"]
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+strict_front_matter: false
 
-#########################
-# more settings
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future: false
+unpublished: false
 
-plugins:
-  - jekyll-redirect-from
+# Plugins
+whitelist: [jekyll-redirect-from]
+plugins: [jekyll-redirect-from]
 
-whitelist:
-  - jekyll-redirect-from
-
+# Conversion
 markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
+# Serving
+detach: false
+port: 4000
+host: 127.0.0.1
+baseurl: "" # does not include hostname
+url: ""
+show_dir_listing: false
+
+# Outputting
+permalink: date
+paginate_path: /page:num
+timezone: Asia/Kolkata
+
+quiet: false
+verbose: false
+defaults: []
+
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false
+
+# Markdown Processors
+kramdown:
+  auto_ids: true
+  entity_output: as_char
+  toc_levels: [1, 2, 3, 4, 5, 6]
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  input: GFM
+  hard_wrap: false
+  footnote_nr: 1
+  show_warnings: false
+
+# Compress HTML
 compress_html:
   clippings: all
   comments: [""]
@@ -45,34 +122,3 @@ compress_html:
   blanklines: false
   ignore:
     envs: []
-
-collections:
-  my_tags:
-    output: true
-    permalink: /tagged/:slug/
-
-defaults:
-  - scope:
-      path: ""
-      type: my_tags
-    values:
-      layout: tagged
-
-permalink: /blog/:slug
-timezone: Asia/Kolkata
-future: false
-
-exclude:
-  - README.md
-  - LICENSE.md
-  - vendor
-  - references
-
-Blog: /blog
-Fiction: /design-post
-
-links:
-  Resume: /assets/resume.pdf
-
-special_links:
-  "Search": https://duckduckgo.com

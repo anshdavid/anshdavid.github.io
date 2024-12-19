@@ -2,19 +2,16 @@
     --text-color: #333;
     --heading-color: #000;
     --link-color: #0000ff;
-    --link-hover-color: #007acc;
     --date-color: #555;
     --spacing: 1rem;
     --small-font: 0.9rem;
-    /* Reduced font size */
     --smaller-font: 0.7rem;
-    /* For dates or less important text */
 }
 
-.articles-section {
+.recent-section {
     display: flex;
     gap: 40px;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -23,7 +20,8 @@
     flex-wrap: wrap;
 }
 
-.article-column {
+.recent-content,
+.recent-papershelf-section {
     flex: 1;
     min-width: 300px;
 }
@@ -39,18 +37,12 @@
 .archive-link {
     font-weight: normal;
     font-size: 0.9rem;
-    /* Smaller link text */
     color: var(--link-color);
     text-decoration: none;
 }
 
-.archive-link:hover {
-    color: var(--link-hover-color);
-}
-
 .article-description {
     font-size: var(--small-font);
-    /* Reduced description size */
     margin-bottom: var(--spacing);
     color: var(--text-color);
 }
@@ -63,9 +55,7 @@
 
 .article-list li {
     margin-bottom: 6px;
-    /* Slightly reduced spacing */
     font-size: var(--small-font);
-    /* Reduced list text size */
     color: var(--text-color);
 }
 
@@ -73,20 +63,10 @@
     color: var(--date-color);
     font-weight: bold;
     font-size: var(--smaller-font);
-    /* Smaller font size for dates */
 }
 
 .article-list a {
     color: var(--link-color);
-    text-decoration: none;
     font-size: var(--small-font);
-    /* Reduced link text size */
-
     text-overflow: ellipsis;
-    /* Adds '...' for truncated text */
-}
-
-.article-list a:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
 }

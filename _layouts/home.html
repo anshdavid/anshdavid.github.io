@@ -12,18 +12,10 @@ layout: compress
 <body>
     {% include header.html %}
 
-    <div class="dotted-line"></div>
-
     <main>
-        <!-- 
-        hero 
-        article
-        aside
-         -->
+        {% include fragment__home_hero.html %}
 
-        {% include hero.html %}
-
-        {{content}}
+        {% include fragement__home_recent.html %}
 
     </main>
 

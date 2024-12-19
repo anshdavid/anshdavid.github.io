@@ -1,0 +1,29 @@
+Blog: /blog
+Fiction: /design-post
+
+# main links
+masthead:
+  - title: "home"
+    permalink: "/"
+  - title: "posts"
+    permalink: "/pages/archive-posts.html"
+  - title: "articles"
+    permalink: "/pages/archive-articles.html"
+  - title: "papershelf"
+    permalink: "/pages/archive-papershelf.html"
+  - title: "portfolio"
+    permalink: "/"
+  - title: 🔍
+    permalink: "/"
+
+footer:
+  - title: "Parent Page A"
+    children:
+      - title: "Child Page A1"
+        url: /
+      - title: "Child Page A2"
+        url: /
+      - title: "Child Page A3"
+        url: /
+      - title: "Child Page A4"
+        url: /

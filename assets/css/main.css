@@ -214,7 +214,7 @@ td {
 }
 
 /* external link marker */
-a[href^="http"]:where(:not([href*="knhash.in/"])):not(:has(img))::after {
+a[href^="http"]:where(:not([href*="anshdavid.com/"])):not(:has(img))::after {
     content: "↗"
 }
 

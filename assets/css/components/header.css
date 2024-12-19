@@ -75,15 +75,3 @@
     color: white;
     text-decoration: none;
 }
-
-.search-icon {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    cursor: pointer;
-}
-
-.search-icon:hover {
-    background-color: var(--main-color);
-    color: white;
-    text-decoration: none;
-}
