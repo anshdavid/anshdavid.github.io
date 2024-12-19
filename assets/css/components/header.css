@@ -1,0 +1,89 @@
+/* Root Variables for Styling */
+:root {
+    --width: 1500px;
+    --font-main: 'Fira Code', monospace;
+    --font-secondary: 'Fira Code', monospace;
+    --font-scale: .95em;
+    --main-color: #96572D;
+    --background-color: #F8F1E5;
+    --text-color: #1F1408;
+    --spacing: 10px;
+
+    /* --masthead-bg-color: #fff;
+    --text-color: #555;
+    --text-color-dark: #333;
+    --spacing: 20px; */
+}
+
+/* Masthead Container */
+.masthead {
+    display: flex;
+    justify-content: space-between;
+    /* Space between two columns */
+    align-items: center;
+    padding: var(--spacing);
+    background-color: var(--background-color);
+    border-bottom: 1px solid #ddd;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: var(--font-main);
+}
+
+
+
+/* Left Section: Site Title */
+.masthead-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.site-tagline {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Right Section: Navigation Links */
+.masthead-right .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: var(--spacing);
+}
+
+.masthead-right .nav-links li {
+    display: inline-block;
+}
+
+.masthead-right .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.masthead-right .nav-links a:hover {
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+}

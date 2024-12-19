@@ -1,0 +1,23 @@
+<header class="masthead">
+    <div class="masthead-left">
+        <h2 class="site-title">Ansh David</h2>
+        <p class="site-tagline">A hungry mind</p>
+        <!-- <p class="site-tagline">{{site.description}}</p> -->
+    </div>
+    <nav class="masthead-right">
+        <ul class="nav-links">
+            <li><a href="{{ site.url }}">home</a></li>
+            <li><a href="{{ site.url }}{{ site.Blog }}">post</a></li>
+            <li><a href="{{ site.url }}{{ site.Fiction }}">article</a></li>
+            <li><a href="{{ site.url }}{{ site.Fiction }}">papershelf</a></li>
+            <li><a href="{{ site.url }}{{ site.Fiction }}">projects</a></li>
+            {% for link in site.links %}
+            <li><a href="{{ site.url }}{{ link[1] }}">{{ link[0] }}</a></li>
+            {% endfor %}
+            <li><a href="#"><span class="search-icon">🔍</span></a></li>
+            <!-- {% for link in site.special_links %}
+            <li><a href="{{ link[1] }}">[{{ link[0] }}]</a></li>
+            {% endfor %} -->
+        </ul>
+    </nav>
+</header>

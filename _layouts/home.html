@@ -1,0 +1,35 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+    {% include header.html %}
+
+    <div class="dotted-line"></div>
+
+    <main>
+        <!-- 
+        hero 
+        article
+        aside
+         -->
+
+        {% include hero.html %}
+
+        {{content}}
+
+    </main>
+
+    <footer>
+        {% include footer.html %}
+    </footer>
+</body>
+
+</html>
