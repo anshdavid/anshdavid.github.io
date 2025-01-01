@@ -7,12 +7,13 @@ data_dir: _data
 includes_dir: _includes
 # sass:
 #   sass_dir: _sass
+
 collections:
   my_tags:
     output: true
     permalink: /tagged/:slug/
   pages:
-    output: false
+    output: true
     permalink: /pages/:path
   papershelf:
     output: true

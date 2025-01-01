@@ -1,20 +1,23 @@
-Blog: /blog
-Fiction: /design-post
-
 # main links
 masthead:
   - title: "home"
     permalink: "/"
   - title: "posts"
-    permalink: "/pages/archive-posts.html"
+    permalink: "/pages/posts.html"
   - title: "articles"
-    permalink: "/pages/archive-articles.html"
+    permalink: "/pages/articles.html"
   - title: "papershelf"
-    permalink: "/pages/archive-papershelf.html"
+    permalink: "/pages/papershelf.html"
   - title: "portfolio"
     permalink: "/"
   - title: 🔍
     permalink: "/"
+
+medium:
+  - title: "Single Layer Perceptron and Activation Function"
+    permalink: "https://medium.com/codex/single-layer-perceptron-and-activation-function-b6b74b4aae66"
+  - title: "The Mystery that is Gradient Decent"
+    permalink: "https://medium.com/codex/the-mystery-that-is-gradient-decent-84a6df448e86"
 
 footer:
   - title: "Parent Page A"

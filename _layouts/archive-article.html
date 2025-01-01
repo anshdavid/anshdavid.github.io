@@ -1,0 +1,33 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+    {% include header.html %}
+
+    <main>
+
+        {{ content }}
+
+        <ul class="medium-article-list">
+            {% for item in site.data.navigation.medium %}
+            <li>
+                <a href="{{ item.permalink | strip}}">{{ item.title }}</a>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+        <footer>
+            {% include footer.html %}
+        </footer>
+</body>
+
+</html>

@@ -6,6 +6,7 @@
     --spacing: 1rem;
     --small-font: 0.9rem;
     --smaller-font: 0.7rem;
+    --smaller-font-archive-date: 0.9rem;
 }
 
 .recent-section {
@@ -63,6 +64,12 @@
     color: var(--date-color);
     font-weight: bold;
     font-size: var(--smaller-font);
+}
+
+.article-date-archive {
+    color: var(--date-color);
+    font-weight: bold;
+    font-size: var(--smaller-font-archive-date);
 }
 
 .article-list a {
