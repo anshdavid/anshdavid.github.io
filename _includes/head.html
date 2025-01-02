@@ -1,21 +1,16 @@
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="Your Site Name RSS Feed"
+        href="{{ '/feed.xml' | absolute_url }}">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
 
-    {% seo %}
+    <!-- SEO START. -->
+    {% include seo.html %}
 
-    <title>{{ page.title }} | {{ site.title }}</title>
-    <meta name="description"
-        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="{{ site.baseurl }}/assets/favicon.ico" type="image/x-icon">
-    <link href='{{ site.baseurl }}/feed.xml' rel='alternate' type='application/atom+xml'>
-    <link rel="canonical" href="{{ site.baseurl }}{{ page.url }}">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-
-
-    <!-- Web Analytics -->
+    <!-- ANALYTICS PROVIDERS-->
     {% for analytics in site.analytics %}
     {% capture str %}
     {{ analytics }}
@@ -25,4 +20,10 @@
     {% include analytics/{{ platform }}.html %}
     {% endif %}
     {% endfor %}
+
+    <!-- SCRIPTS -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url}}">
+
 </head>

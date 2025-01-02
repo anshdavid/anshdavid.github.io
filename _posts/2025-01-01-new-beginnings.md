@@ -29,9 +29,7 @@ _Haha, noob. Ok let’s do this._
 
 * * *
 
-  
-
-### \> Frame problem statement
+# Frame problem statement
 
 You are an adult now. Frame the problem statement yourself. Just ask a bunch of questions and keep reducing scope. If you can visualise the mathematical formulation you have arrived. 
 

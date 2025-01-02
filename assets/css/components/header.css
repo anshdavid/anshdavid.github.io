@@ -2,7 +2,6 @@
 :root {
     --font-main: 'Fira Code', monospace;
     --font-secondary: 'Fira Code', monospace;
-    --font-scale: .95em;
     --text-color: #1F1408;
     --spacing: 10px;
 }

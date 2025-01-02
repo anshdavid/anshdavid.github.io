@@ -1,0 +1,7 @@
+provider: false # google
+google:
+  tracking_id:
+  anonymize_ip:
+
+google_site_verification:
+  id: "tvmhfVDNkt3RG8ad7a4E-OI79YBvaZq4zL40q7Q3Y-I"

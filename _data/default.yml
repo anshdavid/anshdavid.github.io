@@ -1,2 +1,5 @@
 title: anshdavid.com
-description: What I have been upto...
+subtitle: "Blog by Ansh David"
+description: Sharing insights, stories, and knowledge on data science, technology, and beyond. Join the journey!
+title_separator: "-"
+og_image: "/assets/images/author.jpg"

@@ -2,7 +2,7 @@
     <div class="footer-columns">
         <div class="footer-about">
             <h4>About</h4>
-            <p>Sharing insights, stories, and knowledge on data science, technology, and beyond. Join the journey!</p>
+            <p>{{ site.data.default.description }}</p>
         </div>
         <div class="footer-navigation">
             <h4>Quick Links</h4>
@@ -15,9 +15,9 @@
         <div class="footer-social">
             <h4>Connect</h4>
             <ul>
-                <li><a href="#" target="_blank">LinkedIn</a></li>
-                <li><a href="#" target="_blank">GitHub</a></li>
-                <li><a href="#" target="_blank">Medium</a></li>
+                <li><a href="{{ site.data.author.social.linkedin }}" target="_blank">LinkedIn</a></li>
+                <li><a href="{{ site.data.author.social.github }}" target="_blank">GitHub</a></li>
+                <li><a href="{{ site.data.author.social.medium }}" target="_blank">Medium</a></li>
             </ul>
         </div>
     </div>

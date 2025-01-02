@@ -1,5 +1,5 @@
 ---
-layout: archive-article
+layout: default
 ---
 
 <br />
@@ -13,3 +13,11 @@ It is a labor of love, akin to the crafting of a tale told around the fires of o
 Here now is a collection, a record of all the blogs I have written, a treasure trove of words for those who seek it.
 <br />
 <br />
+
+<ul class="medium-article-list">
+    {% for item in site.data.navigation.medium %}
+    <li>
+        <a href="{{ item.permalink | strip}}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
