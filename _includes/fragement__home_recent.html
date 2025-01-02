@@ -3,7 +3,7 @@
         <h3 class="recent-content-heading">Recent posts <a href="/pages/posts.html" class="archive-link">• Full archive
                 →</a></h3>
         <ul class="recent-list">
-            {% for post in site.posts offset:1 limit:3 %}
+            {% for post in site.posts limit:3 %}
             <li>
                 <span class="article-date">{{ post.date | date: "%b %d, %Y" }}: </span>
                 <a href="{{post.url}}">{{post.title}}</a>
@@ -15,7 +15,8 @@
         <h3 class="recent-content-heading">Recent articles <a href="/pages/articles.html" class="archive-link">• Full
                 archive →</a></h3>
         <ul class="recent-list">
-            {% for item in site.data.navigation.medium %}
+            {% assign reversed_items = site.data.navigation.medium | reverse %}
+            {% for item in reversed_items limit:3 %}
             <li>
                 <a href="{{ item.permalink | strip}}">{{ item.title }}</a>
             </li>
