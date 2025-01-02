@@ -2,21 +2,26 @@
 layout: compress
 ---
 
+<!DOCTYPE html>
+<html lang="en">
+
 {% include head.html %}
 
-<main>
+<body>
 
-    {% include header.html %}
+    <main>
 
-    <h1>{{ page.title }}</h1>
-    <i>{{ page.date | date: "%b %d, %Y" }}</i>
-    <h4 class="subtitle">{{ page.subtitle }}</h4>
+        {% include header.html %}
 
-    {{ page.content }}
+        <h1>{{ page.title }}</h1>
+        <i>{{ page.date | date: "%b %d, %Y" }}</i>
+        <h4 class="subtitle">{{ page.subtitle }}</h4>
 
-</main>
+        {{ page.content }}
 
-{% include footer-post.html %}
+    </main>
+
+    {% include footer.html %}
 
 </body>
 

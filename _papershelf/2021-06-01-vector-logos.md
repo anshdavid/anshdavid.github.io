@@ -1,5 +1,5 @@
 ---
-layout: design-post
+layout: post
 title:  "Vector Logos"
 date:   2021-06-01 21:21:21 +0530
 tags: [design]

@@ -4,6 +4,7 @@
 @import "/assets/css/components/header.css";
 @import "/assets/css/components/hero.css";
 @import "/assets/css/components/home_section.css";
+@import "/assets/css/components/site_footer.css";
 
 :root {
     --width: 1500px;
@@ -93,11 +94,6 @@ a:hover {
     text-decoration: none;
 }
 
-header {
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-}
-
 nav a {
     margin-right: 8px;
 }
@@ -114,6 +110,7 @@ button {
 
 main {
     line-height: 1.6;
+    margin: 40px 10px;
 }
 
 table {
@@ -144,12 +141,6 @@ blockquote {
     font-style: italic;
 }
 
-
-footer {
-    margin-top: 40px;
-    padding: 25px 0;
-    text-align: center;
-}
 
 footer>span:has(a[href="https://bearblog.dev"]) {
     display: none;

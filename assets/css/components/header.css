@@ -1,35 +1,25 @@
 /* Root Variables for Styling */
 :root {
-    --width: 1500px;
     --font-main: 'Fira Code', monospace;
     --font-secondary: 'Fira Code', monospace;
     --font-scale: .95em;
-    --main-color: #96572D;
-    --background-color: #F8F1E5;
     --text-color: #1F1408;
     --spacing: 10px;
-
-    /* --masthead-bg-color: #fff;
-    --text-color: #555;
-    --text-color-dark: #333;
-    --spacing: 20px; */
 }
 
 /* Masthead Container */
+
 .masthead {
     display: flex;
     justify-content: space-between;
-    /* Space between two columns */
     align-items: center;
     padding: var(--spacing);
-    background-color: var(--background-color);
-    border-bottom: 1px solid #ddd;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #ead4ae;
+    border-bottom: 3px dotted #7a591f;
+    max-width: 1500px;
+    margin: 0;
     font-family: var(--font-main);
 }
-
-
 
 /* Left Section: Site Title */
 .masthead-left {
@@ -71,7 +61,7 @@
 }
 
 .masthead-right .nav-links a:hover {
-    background-color: var(--main-color);
+    background-color: #96572D;
     color: white;
     text-decoration: none;
 }
