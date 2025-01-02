@@ -9,7 +9,7 @@ includes_dir: _includes
 #   sass_dir: _sass
 
 collections:
-  my_tags:
+  tags:
     output: true
     permalink: /tagged/:slug/
   pages:
