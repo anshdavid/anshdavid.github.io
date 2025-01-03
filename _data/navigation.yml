@@ -18,15 +18,3 @@ medium:
     permalink: "https://medium.com/codex/single-layer-perceptron-and-activation-function-b6b74b4aae66"
   - title: "The Mystery that is Gradient Decent"
     permalink: "https://medium.com/codex/the-mystery-that-is-gradient-decent-84a6df448e86"
-
-footer:
-  - title: "Parent Page A"
-    children:
-      - title: "Child Page A1"
-        url: /
-      - title: "Child Page A2"
-        url: /
-      - title: "Child Page A3"
-        url: /
-      - title: "Child Page A4"
-        url: /
