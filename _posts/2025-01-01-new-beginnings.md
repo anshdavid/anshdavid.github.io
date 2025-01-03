@@ -1,138 +1,47 @@
 ---
 layout: post
-title: "New journey"
-subtitle: "(You haven’t done that before)"
+title: "New Beginnings"
 date: 2025-01-01 08:10:00 +0530
-tags: [general]
+tags: 
+    - general
 ---
 
-```
-> be you
-> have participated in kaggle recommender system competitions
-> datascientist.mp3
-> bossman says to recommend stuff for noobs
-> because they can’t search properly or whatever
-> ok bossman
-> no defined problem statement? 
-> no csv? 
-> no accuracy and mae test suite? 
-> no leaderboard?
-
-what do /b/?
-```
-
-  
-
-_Haha, noob. Ok let’s do this._
-
-
+> When I first embarked on my journey to pursue a Master’s degree in Data Science, I had little idea of the transformative experience that lay ahead. What I did know was that we live in a world powered by data—every swipe, click, and tap leaves a trail, and behind that trail lies untapped potential to make decisions, solve problems, and shape the future. This realization was enough to propel me toward studying a field that is not just in demand but also deeply impactful in our daily lives.
 
 * * *
 
-# Frame problem statement
+# Why Data Science?
 
-You are an adult now. Frame the problem statement yourself. Just ask a bunch of questions and keep reducing scope. If you can visualise the mathematical formulation you have arrived. 
+Data Science sits at the crossroads of statistics, computer science, and domain expertise. It’s the engine behind personalized recommendations on Netflix, predictive models for climate change, and even life-saving innovations in healthcare. The world generates an astounding 2.5 quintillion bytes of data every day, and this explosion of information creates a pressing need for skilled professionals who can analyze, interpret, and act upon it. For me, Data Science offered a way to merge my curiosity for problem-solving with my love for technology and mathematics.
 
-Congratulations. Wasn’t so hard, was it.
+# The Challenges and Growth
 
-  
+Pursuing a part-time Master’s in Data Science from IIT India has been an incredible journey, but it hasn’t been without its challenges. Balancing the rigorous coursework of an IIT with the demands of work and personal life has required immense discipline, careful time management, and unwavering focus. IIT’s reputation for academic excellence and rigorous standards means that every class, project, and assignment demands a level of dedication that pushes you to your limits.
 
-### \> Build framework
+One of the most eye-opening aspects of this experience has been tackling real-world datasets during projects, even as I manage work commitments. I vividly recall analyzing customer churn data for a telecommunications company as part of an academic project. The data was messy, incomplete, and filled with outliers—a perfect representation of the complexities I encounter in professional scenarios. Cleaning the data, building predictive models, and presenting actionable insights were tasks that not only enhanced my technical skills but also provided me with a deep sense of accomplishment. The ability to apply these learnings directly to my job has been immensely rewarding, making the long hours of juggling both worlds worth it.
 
-Setup your Jupyter Notebook so you can iterate fast. Build a first model, maybe a random model that spits out random predictions. Is this a good baseline? Don’t ask such stupid questions, it isn’t. But this will help you build an end to end training and testing pipeline. The train-test split, pre-process placeholders, test suite. 
+Another highlight has been studying alongside an exceptional group of peers. Being part of an IIT program means working with some of the brightest minds in the country, many of whom are also professionals juggling their careers with this challenging course. Their expertise spans diverse fields like finance, healthcare, and technology, which has enriched discussions and group projects, making them more holistic and insightful. The collaborative spirit of the program has taught me one of the most valuable lessons in data science: it’s not just about working in isolation but about leveraging the collective knowledge and experiences of a team.
 
-Build now so you don’t need to keep building later. 
+Studying at IIT has been a humbling and inspiring experience. The institution’s legacy of academic rigor and innovation has constantly motivated me to push my boundaries. Despite the demands of work-life balance, the opportunity to learn from top-tier faculty, engage with cutting-edge research, and be part of a prestigious community makes every challenge worthwhile. It’s a journey of growth that extends far beyond the classroom, shaping not only my career but also my perspective on solving real-world problems.
 
-  
+# The Importance of Data Science Today
 
-### \> Establish baseline
+In today’s time, Data Science is not just a career option; it’s a driving force behind innovation and progress. Here’s why it’s so critical:
 
-You have the problem statement yeah? There is gotta be some stupid simple stuff that is better than random predictions. Yes, heuristics. Pick one, or some. Get test results. Now this is the one to beat. 
+1. **Data-Driven Decisions**: Organizations no longer rely on intuition alone. From startups to Fortune 500 companies, data drives decisions about everything from product design to customer engagement strategies.
 
-  
+2. **Global Challenges**: Whether it’s combating climate change or responding to pandemics, Data Science provides tools to analyze trends, predict outcomes, and develop solutions at scale.
 
-### \> Metrics and reward function
+3. **Personalization**: From shopping to healthcare, consumers expect experiences tailored to their preferences. Data Science enables this personalization, enhancing customer satisfaction and outcomes.
 
-The very next thing is to establish a good metric of evaluation. Actually this should be the second point of order. But we are here, better late than later I guess.
+4. **Future-Proofing Careers**: In an era where automation threatens to replace repetitive tasks, Data Science offers a skill set that’s not only resilient but also future-proof.
 
-This is going to be your leaderboard basically. And it should correlate _highly_ with whatever problem statement you are solving for. Take some time here. 
+# What’s Next?
 
-At least 2 hours. Minimum.
-
-  
-
-### \> Simple algorithms first
-
-Or SAF for short. Heard of Multi Armed Bandits? Try that first. Shit’s amazing. Probably all that you’ll need.
-
-  
+As I near the completion of my Master’s program, I’m filled with gratitude and anticipation. Data Science has taught me more than algorithms and programming—it’s taught me resilience, critical thinking, and the art of storytelling through data. My goal now is to contribute to solving meaningful problems, be it in healthcare, sustainability, or education.
 
 * * *
 
-_With me so far?_ 
+To anyone considering a path in Data Science, my advice is simple: embrace the challenge. The field is vast and ever-evolving, but it’s also incredibly rewarding. In a world increasingly shaped by data, the power to unlock its potential lies in our hands.
 
-_All this was within Jupyter. But predictions happen in the world outside, so we got stuff to do. Strap in. We are going outside._
-
-* * *
-
-  
-
-### \> Prediction Service setup
-
-How you gonna do the predictions huh? You need an API or some shit. Setup a dummy service that takes in request (a user id maybe) and responds with predictions. 
-
-Find something that works with python scripts. Why? Because it is easy to convert a Jupyter Notebook to an executable script but what do I know, write in Cython for all I care. 
-
-But code well. Classes and shit. You are in production environment now. Act like it.
-
-  
-
-### \> Feature store (low latency cache)
-
-A lot of concurrent requests (QPS) and low latency requests means optimisations. Use caches and feature stores to save model weights and intermediate products. CosmosDB, Aerospike, just pick one and run with it. You know how dictionary look-ups are very fast? Same concept. Prefer lookups to on-demand processing.
-
-Keep the actual prediction service is as light as possible. Maybe it just does a dot product of vectors. Maybe you found out about ONNX runtimes and used that. 
-
-Good job!
-
-  
-
-### \> Logs, health metrics and alerting
-
-Stuff breaks. Production stuff breaks hard. You need to know when it breaks. Log stuff. Model health, pre-processing data health, maybe every request and response (RRLogs). Actually, definitely do that. ELK, Kibana, or some such crap. Then setup alerts on it. So when a bunch of predictions are throwing NULLs you will be on top of it in 1 hour rather than the product folks telling you about it after 3 days.
-
-While you are at it also set up some alerting on the infrastructure. Running at 95% memory capacity or 5% CPU capacity, both are bad. Or your Celery queue is choked to the end of times. Bad.
-
-Keep your eyes on those numbers. Better, push those numbers (Prometheus) to a dashboard (Grafana) and set up alerts (PagerDuty). 
-
-Rest those eyes until needed.
-
-  
-
-### \> Performance metrics
-
-Fancy graphs that product people see to judge how good your recommender system is working. Should contain your model performance metrics and related product metrics (Retention, Engagement, Churn, what have you). Dunno what to use? Use Metabase. If someone asks why just say I told you to.
-
-If you build this to be sufficiently standalone so all your future models can plug into it, well done, you are a good engineer.
-
-  
-
-### \> Model re-training and pipelines
-
-Models get stale. Underlying data may no longer be relevant. You gotta re-train your models. Automate that shit. 
-
-Airflow will let you schedule tasks and dependencies in what it calls DAGs. Which are just Graphs which have a particular Direction and are Acyclic. Use them. It is fancy cron and you can do some fancy cron stuff with it. 
-
-  
-
-* * *
-
-  
-
-_Congratulations. Your recommender system is now in production._ 
-
-_Soon “people” will come to you with suggestions and ideas on how to make recommendations better. They will say it is a small change, let us see how it performs._ 
-
-_Now you are thinking about an experimentation framework. Hypothesis testing. Model Controller._
-
-_Until then..._
+This is my journey so far, and it’s only the beginning. The question isn’t why Data Science is important—it’s how you’ll use it to make a difference.
