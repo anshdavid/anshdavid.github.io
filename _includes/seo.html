@@ -163,6 +163,6 @@ If neither page.header.teaser nor site.data.default.og_image is defined, the val
 {% endif %} -->
 
 <!-- SITE VERIFICATION -->
-{% if site.data.analytics.google_site_verification %}
-<meta name="google-site-verification" content="{{ site.data.analytics.google_site_verification.id }}" />
+{% if site.data.analytics.google.verification_id %}
+<meta name="google-site-verification" content="{{ site.data.analytics.google.verification_id }}" />
 {% endif %}
