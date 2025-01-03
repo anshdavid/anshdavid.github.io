@@ -11,17 +11,6 @@
     <!-- SEO START. -->
     {% include seo.html %}
 
-    <!-- ANALYTICS PROVIDERS-->
-    {% for analytics in site.analytics %}
-    {% capture str %}
-    {{ analytics }}
-    {% endcapture %}
-    {% assign platform = str | split: '{' | first %}
-    {% if site.analytics[platform].id and site.analytics[platform].id != empty %}
-    {% include analytics/{{ platform }}.html %}
-    {% endif %}
-    {% endfor %}
-
     <!-- SCRIPTS -->
     {% for script in site.data.scripts.list %}
     {% include scripts/{{ script }} %}
