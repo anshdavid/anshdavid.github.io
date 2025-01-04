@@ -1,0 +1,55 @@
+/* Masthead Section */
+.masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing);
+    background-color: #ead4ae;
+    border-bottom: 3px dotted #7a591f;
+    max-width: var(--width);
+    font-family: var(--font-main);
+    margin: 0;
+}
+
+.masthead-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.site-tagline {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.masthead-right .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: var(--spacing);
+}
+
+.masthead-right .nav-links li {
+    display: inline-block;
+}
+
+.masthead-right .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.masthead-right .nav-links a:hover {
+    background-color: #96572D;
+    color: #ffffff;
+    text-decoration: none;
+}

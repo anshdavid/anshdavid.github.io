@@ -1,0 +1,38 @@
+/* Root Variables */
+:root {
+    --font-main: 'Fira Code', monospace;
+    --font-secondary: 'Fira Code', monospace;
+    --text-color: #1F1408;
+    --background-color: #F8F1E5;
+    --heading-color: #2C1E15;
+    --link-color: #7C4011;
+    --visited-color: #5E3211;
+    --main-color: #96572D;
+    --code-background-color: #E6D7C3;
+    --code-color: #2C1E15;
+    --blockquote-color: #B99B6B;
+    --spacing: 10px;
+    --small-font: 0.9rem;
+    --hero-spacing: 20px;
+    --hero-gap: 5px;
+    --hero-border-radius: 4px;
+    --hero-border: 1px solid #000;
+    --hero-max-width: 1500px;
+    --hero-image-col-width: 450px;
+    --font-scale: 0.95em;
+    --width: 1500px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1A1310;
+        --heading-color: #F0DFC0;
+        --text-color: #F0E6D2;
+        --link-color: #E5A254;
+        --visited-color: #C49B76;
+        --main-color: #B89470;
+        --code-background-color: #2C2117;
+        --code-color: #F0DFC0;
+        --blockquote-color: #6E563D;
+    }
+}

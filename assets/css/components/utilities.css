@@ -1,0 +1,24 @@
+/* Utility Classes */
+.dotted-line {
+    border-top: 3px dotted #8b4513;
+    padding: 3px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed;
+}
+
+img {
+    max-width: 100%;
+}
+
+.highlight {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    overflow-x: auto;
+}

@@ -32,7 +32,7 @@ A garden grown from every planted seed.\
     {% for post in post_list %}
     {% unless post == previous %}
     <li>
-        <span class="article-date-archive">{{ post.date | date: "%b %d, %Y" }}: </span>
+        <span class="article-date">{{ post.date | date: "%b %d, %Y" }}: </span>
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endunless %}

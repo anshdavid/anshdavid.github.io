@@ -1,0 +1,65 @@
+/* General Styles */
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto 150px;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+main {
+    line-height: 1.6;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--link-color);
+    font-family: var(--font-main);
+    text-decoration: none;
+    border-bottom: 3px solid var(--main-color);
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: var(--main-color);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--visited-color);
+}
+
+code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+}
+
+blockquote {
+    border-left: 1px solid var(--blockquote-color);
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+}
