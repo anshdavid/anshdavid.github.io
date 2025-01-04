@@ -14,14 +14,33 @@ layout: compress
     <main>
 
         <div class="article">
+            <div class="article-heading">
+                <h1 class="article-title">{{ page.title }}</h1>
 
-            <h1>{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h4 class="subtitle">{{ page.subtitle }}</h4>
-            {% endif %}
-            <i>{{ page.date | date: "%b %d, %Y" }}</i>
-            {{ page.content}}
+                {% if page.subtitle %}
+                <h4 class="article-subtitle">{{ page.subtitle }}</h4>
+                {% endif %}
 
+                <p class="article-meta">
+                    <span class="article-date">
+                        Dated: {{ page.date | date: "%b %d, %Y" }}
+                    </span>
+
+                    {% if page.tags %}
+                    <span class="article-tags">
+                        Tags :
+                        {% for t in page.tags %}
+                        <a href="/tags/{{ t | slugify }}">#{{ t }}</a>
+                        {% if forloop.last == false %}, {% endif %}
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                </p>
+            </div>
+
+            <div class="article-content">
+                {{ page.content }}
+            </div>
         </div>
 
     </main>
