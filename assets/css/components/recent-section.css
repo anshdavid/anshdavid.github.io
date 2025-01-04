@@ -1,11 +1,14 @@
+/* recent-section.css */
+
 /* Recent Section */
 .recent-section {
     display: flex;
-    gap: 40px;
-    max-width: var(--width);
+    flex-direction: column;
+    /* Stack articles on smaller screens */
+    gap: 20px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px 3px;
-    flex-wrap: wrap;
 }
 
 .recent-content,

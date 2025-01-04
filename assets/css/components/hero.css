@@ -1,9 +1,12 @@
+/* hero.css */
+
 /* Hero Section */
 .hero-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* Stack hero intro and image by default */
     gap: var(--hero-gap);
-    max-width: var(--hero-max-width);
+    width: 100%;
     padding-top: var(--hero-spacing);
 }
 
@@ -15,14 +18,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: left;
 }
 
 .hero-intro h2 {
     margin-top: 0;
     color: var(--heading-color);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    /* Slightly smaller for mobile-first */
 }
 
 .hero-intro p {
@@ -44,16 +48,18 @@
 }
 
 .hero-image-col {
-    width: var(--hero-image-col-width);
+    width: 100%;
+    /* Full width on small screens */
     height: 300px;
     overflow: hidden;
     border: var(--hero-border);
     border-radius: var(--hero-border-radius);
+    margin-bottom: var(--hero-gap);
 }
 
 .hero-image-col img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
     display: block;
 }

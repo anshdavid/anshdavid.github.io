@@ -1,10 +1,16 @@
+/* base.css */
+
 /* General Styles */
 body {
+    /* For very small screens (below 320px and up to 320px), 
+       we start with minimal margins/padding. */
     font-family: var(--font-secondary);
     font-size: var(--font-scale);
-    margin: auto 150px;
+    margin: 0 auto;
     padding: 20px;
-    max-width: var(--width);
+    width: 95%;
+    /* Let the content expand to full width on very small screens */
+    max-width: 100%;
     text-align: left;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -15,10 +21,8 @@ body {
 
 main {
     line-height: 1.6;
-    margin-top: 40px;
-    margin-bottom: 100px;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 20px 0;
+    /* Smaller top/bottom spacing for mobile-first */
 }
 
 h1,

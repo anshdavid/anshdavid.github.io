@@ -1,28 +1,23 @@
+/* article.css */
+
 /* Article Container */
 .article {
-    /* Use your site background or a slight variant */
     background-color: var(--background-color);
-
-    /* Subtle border; can reference a variable or keep a hex code */
     border: 1px solid #ddd;
     border-radius: 6px;
-
-    /* Base spacing on mobile */
     padding: 1em;
     margin: 1em auto;
-
-    /* Optional shadow */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Article Heading (unchanged) */
 .article-heading {
     margin-bottom: 1.5em;
 }
 
 .article-title {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.4rem;
+    /* Mobile-first size */
     font-weight: bold;
     line-height: 1.2;
     color: var(--heading-color);
@@ -30,17 +25,15 @@
 
 .article-subtitle {
     margin: 0.5rem 0 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #666;
     font-weight: normal;
 }
 
-/* Article Meta - stacked layout */
 .article-meta {
     margin-top: 0.5rem;
     font-size: 0.9rem;
     color: #444;
-    /* Remove flex so that date and tags stack vertically */
 }
 
 .article-meta .article-date,
@@ -49,7 +42,6 @@
     margin-bottom: 0.3em;
 }
 
-/* Article Content (unchanged) */
 .article-content {
     font-size: 1rem;
     line-height: 1.6;
@@ -58,19 +50,4 @@
 
 .article-content p {
     margin-bottom: 1em;
-}
-
-/* Responsive Tweaks for Smaller Screens (optional) */
-@media (max-width: 768px) {
-    .article {
-        padding: 1.5em;
-    }
-
-    .article-title {
-        font-size: 1.6rem;
-    }
-
-    .article-subtitle {
-        font-size: 1.05rem;
-    }
 }

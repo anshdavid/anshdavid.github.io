@@ -1,3 +1,5 @@
+/* footer.css */
+
 /* Footer Section */
 .site-footer {
     background-color: #ead4ae;
@@ -10,17 +12,17 @@
 
 .footer-columns {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    /* Stack footer sections on smaller screens */
     gap: 20px;
 }
 
 .footer-columns>.footer-about {
-    flex: 5;
-    margin-right: auto;
+    flex: 1 1 100%;
 }
 
 .footer-columns>div {
-    flex: 1;
+    flex: 1 1 100%;
     margin: 0;
     text-align: left;
 }
@@ -55,20 +57,4 @@
 .footer-copyright {
     margin: 0;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .footer-columns {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-    }
-
-    .footer-columns>div {
-        flex: 1 1 100%;
-    }
-
-    .footer-copyright {
-        text-align: center;
-    }
 }

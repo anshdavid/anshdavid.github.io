@@ -1,12 +1,15 @@
+/* masthead.css */
+
 /* Masthead Section */
 .masthead {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    /* Stack by default on smaller devices */
+    align-items: flex-start;
     padding: var(--spacing);
     background-color: #ead4ae;
     border-bottom: 3px dotted #7a591f;
-    max-width: var(--width);
+    max-width: 100%;
     font-family: var(--font-main);
     margin: 0;
 }
@@ -14,11 +17,13 @@
 .masthead-left {
     display: flex;
     flex-direction: column;
+    margin-bottom: var(--spacing);
 }
 
 .site-title {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    /* Slightly smaller for mobile-first */
     color: var(--text-color);
     font-weight: bold;
 }
@@ -34,11 +39,14 @@
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
+    /* Stack nav links vertically on small screens */
     gap: var(--spacing);
 }
 
 .masthead-right .nav-links li {
     display: inline-block;
+    margin-bottom: var(--spacing);
 }
 
 .masthead-right .nav-links a {
