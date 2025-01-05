@@ -53,11 +53,11 @@ unpublished: false
 # Plugins
 whitelist:
   - jekyll
-  - rake"
-  - tzinfo-data"
-  - wdm"
-  - webrick"
-  - faraday-retry"
+  - rake
+  - tzinfo-data
+  - wdm
+  - webrick
+  - faraday-retry
   - jekyll-redirect-from
   - jekyll-paginate
   - jekyll-sitemap
@@ -71,11 +71,11 @@ whitelist:
 
 plugins:
   - jekyll
-  - rake"
-  - tzinfo-data"
-  - wdm"
-  - webrick"
-  - faraday-retry"
+  - rake
+  - tzinfo-data
+  - wdm
+  - webrick
+  - faraday-retry
   - jekyll-redirect-from
   - jekyll-paginate
   - jekyll-sitemap

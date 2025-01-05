@@ -22,8 +22,10 @@ gem "tzinfo-data"
 gem "wdm"
 gem "webrick"
 gem "faraday-retry"
-gem "github-pages"
 gem "jemoji"
+gem "mutex_m"
+
+gem "github-pages", group: :jekyll_plugins
 
 group :jekyll_plugins do
   gem "jekyll-redirect-from"
