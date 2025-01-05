@@ -51,8 +51,41 @@ future: false
 unpublished: false
 
 # Plugins
-whitelist: [jekyll-redirect-from]
-plugins: [jekyll-redirect-from]
+whitelist:
+  - jekyll
+  - rake"
+  - tzinfo-data"
+  - wdm"
+  - webrick"
+  - faraday-retry"
+  - jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-algolia
+  - github-pages
+  - jemoji
+
+plugins:
+  - jekyll
+  - rake"
+  - tzinfo-data"
+  - wdm"
+  - webrick"
+  - faraday-retry"
+  - jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-algolia
+  - github-pages
+  - jemoji
 
 # Conversion
 markdown: kramdown

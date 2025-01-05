@@ -22,6 +22,8 @@ gem "tzinfo-data"
 gem "wdm"
 gem "webrick"
 gem "faraday-retry"
+gem "github-pages"
+gem "jemoji"
 
 group :jekyll_plugins do
   gem "jekyll-redirect-from"
@@ -32,9 +34,4 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
-  gem "github-pages"
-  gem "jemoji"
-end
-
-group :jekyll_plugins do
 end
