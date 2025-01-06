@@ -24,3 +24,12 @@ img {
     border-radius: 3px;
     overflow-x: auto;
 }
+
+
+/* Style all external links */
+a:not([href*="anshdavid.com"])::after {
+    content: "🡵";
+    margin-left: 1.3px;
+    font-size: 0.8em;
+    color: #007bff;
+}

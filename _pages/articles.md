@@ -15,7 +15,7 @@ Here now is a collection, a record of all the blogs I have written, a treasure t
 <br />
 
 <ul class="medium-article-list">
-    {% for item in site.data.navigation.medium %}
+    {% for item in site.data.articles.medium %}
     <li>
         <a href="{{ item.permalink | strip}}">{{ item.title }}</a>
     </li>

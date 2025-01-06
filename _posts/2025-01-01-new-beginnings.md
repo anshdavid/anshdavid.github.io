@@ -36,11 +36,11 @@ In today’s time, Data Science is not just a career option; it’s a driving fo
 
 4. **Future-Proofing Careers**: In an era where automation threatens to replace repetitive tasks, Data Science offers a skill set that’s not only resilient but also future-proof.
 
+* * *
+
 # What’s Next?
 
 As I near the completion of my Master’s program, I’m filled with gratitude and anticipation. Data Science has taught me more than algorithms and programming—it’s taught me resilience, critical thinking, and the art of storytelling through data. My goal now is to contribute to solving meaningful problems, be it in healthcare, sustainability, or education.
-
-* * *
 
 To anyone considering a path in Data Science, my advice is simple: embrace the challenge. The field is vast and ever-evolving, but it’s also incredibly rewarding. In a world increasingly shaped by data, the power to unlock its potential lies in our hands.
 

@@ -15,7 +15,7 @@
         <h3 class="recent-heading">Recent articles <a href="/pages/articles.html" class="archive-link">Full
                 archive →</a></h3>
         <ul class="recent-list">
-            {% assign reversed_items = site.data.navigation.medium | reverse %}
+            {% assign reversed_items = site.data.articles.medium | reverse %}
             {% for item in reversed_items limit:3 %}
             <li>
                 <a href="{{ item.permalink | strip}}" target="_blank">{{ item.title }}</a>

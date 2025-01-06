@@ -12,9 +12,3 @@ masthead:
     permalink: "/"
   - title: 🔍
     permalink: "/"
-
-medium:
-  - title: "Single Layer Perceptron and Activation Function"
-    permalink: "https://medium.com/codex/single-layer-perceptron-and-activation-function-b6b74b4aae66"
-  - title: "The Mystery that is Gradient Decent"
-    permalink: "https://medium.com/codex/the-mystery-that-is-gradient-decent-84a6df448e86"
