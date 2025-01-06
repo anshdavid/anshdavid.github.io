@@ -3,7 +3,7 @@
 /* Article Container */
 .article {
     background-color: var(--background-color);
-    border: 1px solid #ddd;
+    border: 2px solid #b3b3b3;
     border-radius: 6px;
     padding: 1em;
     margin: 1em auto;

@@ -8,6 +8,14 @@
     gap: var(--hero-gap);
     width: 100%;
     padding-top: var(--hero-spacing);
+
+    /*  */
+    /* background-color: var(--background-color);
+    border: 2px solid #b3b3b3;
+    border-radius: 6px;
+    padding: 1em;
+    margin: 1em auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); */
 }
 
 .hero-intro {
