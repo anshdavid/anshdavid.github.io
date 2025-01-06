@@ -33,3 +33,9 @@ a:not([href*="anshdavid.com"])::after {
     font-size: 0.8em;
     color: #007bff;
 }
+
+a[href^="/"]::after,
+a[href^="#"]::after {
+    content: "";
+    /* No arrow for relative links */
+}
