@@ -1,12 +1,14 @@
 {% if site.data.default.mathjax %}
 <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
+    MathJax.Hub.Config(
+      {
         jax: ["input/TeX","input/MathML","output/SVG", "output/CommonHTML"],
         extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js", "CHTML-preview.js"],
         TeX: {
           extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
           equationNumbers: {
-            autoNumber: "AMS"
+            autoNumber: "AMS",
+            tagSide: "right"
           }
         },
         tex2jax: {
@@ -14,24 +16,19 @@
           displayMath: [ ['$$','$$'] ],
           processEscapes: true,
         },
+        "HTML-CSS": { 
+          availableFonts: ["TeX"] 
+        },
+      });
+      MathJax.Hub.Register.StartupHook("TeX AMSmath Ready", function () {
+        MathJax.InputJax.TeX.Stack.Item.AMSarray.Augment({
+          clearTag() {
+            if (!this.global.notags) {
+              this.super(arguments).clearTag.call(this);
+            }
+          }
+        });
       });
 </script>
 <script type="text/javascript" src="{{ site.data.default.mathjax.source }}"></script>
 {% endif %}
-
-
-<!-- MathJax.Hub.Config({
-        jax: ["input/TeX","input/MathML","output/SVG", "output/CommonHTML"],
-    extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js", "CHTML-preview.js"],
-    TeX: {
-      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
-      equationNumbers: { autoNumber: "AMS" } 
-    },
-      tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-          processEscapes: true,
-          processEnvironments: true
-        },
-        "HTML-CSS": { availableFonts: ["TeX"] }
-      }); -->
