@@ -3,3 +3,7 @@ subtitle: "Blog by Ansh David"
 description: Sharing insights, stories, and knowledge on data science, technology, and beyond. Join the journey!
 title_separator: "-"
 og_image: "/assets/images/author.jpg"
+
+mathjax:
+  source: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML"
+  autoNumber: true
