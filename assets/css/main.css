@@ -20,4 +20,5 @@
 @import "/assets/css/components/utilities.css";
 
 /* 6. Utilities */
+@import "/assets/css/components/mathjax.css";
 @import "/assets/css/components/breakpoints.css";

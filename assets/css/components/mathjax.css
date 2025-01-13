@@ -1,0 +1,10 @@
+/* mathjax.css */
+
+mjx-container[jax="CHTML"] {
+    font-size: 127% !important;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+    margin-top: 1.3em !important;
+    margin-bottom: 1.3em !important;
+}
