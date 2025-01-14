@@ -119,3 +119,5 @@ Bayesian techniques provide **credible intervals** (the Bayesian analogue of con
 * * *
 
 Bayes’ Theorem represents one of the most powerful tools in a data scientist’s toolkit. Its broad range of applications—spanning medical tests, spam filtering, recommendation engines, and A/B testing—attests to its versatility and enduring relevance. Whether you’re building a simple Naive Bayes classifier or exploring complex hierarchical Bayesian models, understanding and applying Bayes’ Theorem can significantly enhance your ability to make informed, data-driven decisions while explicitly accounting for uncertainty.
+
+> Check out my full article on [Medium](https://ansh1990.medium.com/bayes-theorem-and-the-theorem-of-total-probability-bebc36df5e69)
