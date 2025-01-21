@@ -63,4 +63,4 @@ Imagine you launch an A/B test: Group A receives the current version of a websit
 A hypothesis sets the stage for what you’re testing, while the p-value tells you how consistent your data is with the null hypothesis. Together, they form the backbone of statistical testing, guiding researchers and analysts in making logical, data-driven decisions. By understanding what a p-value represents—and recognizing its limitations—you’ll be better equipped to design experiments, interpret results, and communicate findings in a clear, accurate manner.
 
 
-> Check out my full article on [Medium]()
+> Check out my full article on [Medium](https://ansh1990.medium.com/hypothesis-and-p-value-78e37101e9c3)
