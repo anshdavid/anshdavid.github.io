@@ -61,7 +61,7 @@
    min-width: 1025px */
 @media (min-width: 1025px) {
     body {
-        max-width: 1400px;
+        max-width: 1250px;
         /* now we allow up to the main width (1500px) */
     }
 
