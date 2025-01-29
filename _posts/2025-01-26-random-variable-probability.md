@@ -208,4 +208,4 @@ Moments provide insights into the distribution of a random variable. Common mome
 
 Understanding mass, distribution, and density functions is essential for analyzing random variables. These functions form a framework for describing and interpreting random processes in both theoretical and practical contexts. By mastering these concepts, one gains a powerful toolset for exploring the stochastic nature of the world and applying probabilistic models across diverse fields.
 
-> Check out my full article on [Medium]()
+> Check out my full article on [Medium](https://ansh1990.medium.com/exploring-of-random-variables-b8a93b090b36)
