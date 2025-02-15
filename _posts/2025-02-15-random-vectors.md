@@ -2,7 +2,7 @@
 layout: post
 title: "Short introduction to Random Vectors"
 subtitle: "Joint Distributions, Conditional Distributions, and Independence"
-date: 2025-01-26 12:45:00 +0530
+date: 2025-02-15 12:45:00 +0530
 tags: 
     - data-science
     - random-vector
