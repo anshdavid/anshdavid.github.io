@@ -265,4 +265,4 @@ you're operating in a multivariate space where the interplay between variables m
 
 By mastering these concepts, you gain a robust toolkit for tackling high-dimensional data problems. Recognizing when variables are dependent or conditionally dependent—and modeling them appropriately—leads to more accurate predictions, fewer pitfalls, and a deeper understanding of the complex interactions in your data.
 
-> Check out my full article on [Medium]()
+> Check out my full article on [Medium](https://medium.com/@ansh1990/exploring-random-vectors-c9a91604fbe3)
