@@ -203,7 +203,7 @@ Consider two blood tests \\( X_1 \\) and \\( X_2 \\), and a binary disease statu
 - \\( f_{X_1, X_2 \mid D=1}(x_1, x_2) \\): Distribution of test scores among diseased patients.  
 - \\( f_{X_1, X_2 \mid D=0}(x_1, x_2) \\): Distribution among healthy patients.
 
-To diagnose a new patient with observed test scores \\( (x_1^*, x_2^*) \\), you'd compute the posterior \\( P(D=1 \mid X_1 = x_1^*, X_2 = x_2^*) \\) using Bayes' Theorem. If \\( X_1 \\) and \\( X_2 \\) are conditionally independent given \\( D \\), you get:
+To diagnose a new patient with observed test scores \\( (x_1^{\*}, x_2^{\*}) \\), you'd compute the posterior \\( P(D=1 \mid X_1 = x_1^{\*}, X_2 = x_2^{\*}) \\) using Bayes' Theorem. If \\( X_1 \\) and \\( X_2 \\) are conditionally independent given \\( D \\), you get:
 
 \\[
 f_{X_1, X_2 \mid D}(x_1, x_2)
