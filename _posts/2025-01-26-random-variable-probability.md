@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Mass, Distribution, and Density Functions"
-subtitle: "Exploration of Random Variable Probability"
+title: "Exploring Random Variable"
+subtitle: "Mass, Distribution, and Density Functions"
 date: 2025-01-26 12:45:00 +0530
 tags: 
     - data-science
