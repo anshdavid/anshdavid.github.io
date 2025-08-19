@@ -1,0 +1,7 @@
+bradlc.vscode-tailwindcss
+dsznajder.es7-react-js-snippets
+github.copilot
+github.copilot-chat
+ms-vscode.vscode-typescript-next
+visualstudioexptteam.intellicode-api-usage-examples
+visualstudioexptteam.vscodeintellicode

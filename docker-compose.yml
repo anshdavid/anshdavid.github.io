@@ -1,9 +1,20 @@
+name: 'website-anshdavid'
+
 services:
-  app:
-    image: node:lts
+  astro:
+    container_name: astro-paper
+    build:
+      context: .
+      dockerfile: dockerfile
     ports:
-      - 4321:4321
-    working_dir: /app
-    command: npm run dev -- --host 0.0.0.0
+      - "4321:4321"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - HOST=0.0.0.0
+      - NODE_ENV=development
     volumes:
       - ./:/app
+      - website-anshdavid-modules:/app/node_modules
+
+volumes:
+  website-anshdavid-modules:
