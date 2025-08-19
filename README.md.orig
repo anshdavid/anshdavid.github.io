@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+anshdavid.com
+=============
+
+# Setup
+
+1. install ruby (highlighted version on [site](https://rubyinstaller.org/downloads/))
+2. Choose `MSYS2 and MINGW development toolchain` for `ridk install` options
+3. run `gem install jekyll bundler`
+4. install dependencies `bundle install`
+
+# Run 
+
+- `bundle exec jekyll build`
+- `bundle exec jekyll serve`
+=======
 # AstroPaper 📄
 
 ![AstroPaper](public/astropaper-og.jpg)
@@ -178,3 +194,4 @@ Licensed under the MIT License, Copyright © 2025
 ---
 
 Made with 🤍 by [Sat Naing](https://satnaing.dev) 👨🏻‍💻 and [contributors](https://github.com/satnaing/astro-paper/graphs/contributors).
+>>>>>>> 1a239db (Initial commit from Astro)
