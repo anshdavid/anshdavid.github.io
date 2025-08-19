@@ -3,7 +3,7 @@ export const SITE = {
   author: "Ansh David",
   profile: "https://anshdavid.com/",
   desc: "Personal blog about technology, programming, AI and everything I like",
-  title: "AstroPaper",
+  title: "@AnshDavid",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
