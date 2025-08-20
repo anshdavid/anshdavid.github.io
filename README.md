@@ -19,4 +19,8 @@ If using VS Code, install all recommended extensions:
 while read line; do code --install-extension "$line"; done < extensions.txt
 ```
 
+## Run astro
+
+- `npm run dev -- --host 0.0.0.0`
+
 ---
