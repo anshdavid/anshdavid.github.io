@@ -53,9 +53,9 @@ A commonly used threshold is **0.05**, where a p-value below 0.05 is frequently 
 
 Despite their popularity, p-values are often misunderstood. A p-value does not:
 
-1. Prove that the null hypothesis is false.  
-2. Measure how big or important an effect is.  
-3. Guarantee that results are practically significant or relevant in the real world.  
+1. Prove that the null hypothesis is false.
+2. Measure how big or important an effect is.
+3. Guarantee that results are practically significant or relevant in the real world.
 
 It’s possible for a result to be statistically significant but have little real-world impact, especially if your sample size is large.
 

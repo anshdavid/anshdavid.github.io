@@ -16,7 +16,7 @@ timezone: "Asia/Kolkata"
 
 Bayes’ Theorem stands as a bedrock principle in the fields of probability, statistics, and data science. It serves as a mathematical framework for updating our beliefs (or probabilities) about an event in light of new evidence. This post delves into its statement, formula, derivation, extended applications, and practical importance in data science, highlighting some key points often overlooked in shorter explanations.
 
-* * *
+---
 
 ## Table of contents
 
@@ -24,7 +24,7 @@ Bayes’ Theorem stands as a bedrock principle in the fields of probability, sta
 
 Bayes’ Theorem essentially states:
 
-> *Given a hypothesis \(A\) and evidence \(B\), the probability that \(A\) is true after observing \(B\) (the posterior probability) is proportional to the likelihood of observing \(B\) if \(A\) were true, times the prior probability of \(A\).*
+> _Given a hypothesis \(A\) and evidence \(B\), the probability that \(A\) is true after observing \(B\) (the posterior probability) is proportional to the likelihood of observing \(B\) if \(A\) were true, times the prior probability of \(A\)._
 
 In other words, it gives us a systematic way to **update** the probability of an event or hypothesis whenever new information becomes available.
 
@@ -37,8 +37,8 @@ $$
 where:
 
 - **Posterior Probability** - $\footnotesize \mathbf{P(A \mid B)}$ : the probability of event $\footnotesize \mathbf{A}$ given the evidence $\footnotesize \mathbf{B}$.
-- **Likelihood** - $\footnotesize \mathbf{P(B \mid A)}$: the probability of observing $\footnotesize \mathbf{B}$ if $\footnotesize \mathbf{A}$ is true.  
-- **Prior Probability** - $\footnotesize \mathbf{P(A)}$: the initial or existing belief about the probability of $\footnotesize \mathbf{A}$ before seeing $\footnotesize \mathbf{B}$.  
+- **Likelihood** - $\footnotesize \mathbf{P(B \mid A)}$: the probability of observing $\footnotesize \mathbf{B}$ if $\footnotesize \mathbf{A}$ is true.
+- **Prior Probability** - $\footnotesize \mathbf{P(A)}$: the initial or existing belief about the probability of $\footnotesize \mathbf{A}$ before seeing $\footnotesize \mathbf{B}$.
 - **Evidence or Marginal Probability** - $\footnotesize \mathbf{P(B)}$: the total probability of $\footnotesize \mathbf{B}$ occurring under all hypotheses or events.
 
 In cases where $\footnotesize \mathbf{A}$ can take on multiple mutually exclusive values, $\footnotesize \mathbf{(A_1, A_2, \ldots, A_n)}$, we calculate:
@@ -52,8 +52,8 @@ $$
 1. **Recall the definition of conditional probability**:
 
    $$
-   P(A \mid B) = \frac{P(A \cap B)}{P(B)}, 
-   \quad 
+   P(A \mid B) = \frac{P(A \cap B)}{P(B)},
+   \quad
    P(B \mid A) = \frac{P(A \cap B)}{P(A)}.
    $$
 
@@ -73,7 +73,7 @@ $$
 
 ### Medical Testing & Diagnosis
 
-- **Disease Testing**: If a test is 90% accurate, Bayes’ Theorem refines the probability that a patient actually has the disease given a positive test result, factoring in the disease’s base rate (prevalence).  
+- **Disease Testing**: If a test is 90% accurate, Bayes’ Theorem refines the probability that a patient actually has the disease given a positive test result, factoring in the disease’s base rate (prevalence).
 - **False Positives & Negatives**: It helps clarify why a “positive” test might not always mean “diseased,” especially when the condition is rare.
 
 ### Spam Filtering & Email Classification
@@ -90,7 +90,7 @@ $$
 
 ### Machine Learning & Predictive Modeling
 
-- **Naive Bayes Classifiers**: Despite being “naive,” this algorithm often performs surprisingly well in text classification, sentiment analysis, and other tasks.  
+- **Naive Bayes Classifiers**: Despite being “naive,” this algorithm often performs surprisingly well in text classification, sentiment analysis, and other tasks.
 - **Hierarchical Bayesian Models**: In more complex settings, hierarchical models capture multiple levels of uncertainty and variability, proving invaluable in areas like time‑series forecasting and personalized medicine.
 
 ## Importance in Data Science
@@ -109,16 +109,16 @@ Bayesian techniques provide **credible intervals** (the Bayesian analogue of con
 
 ### Comparison to Frequentist Methods
 
-- **Frequentist**: Parameters are fixed but unknown, and probability is interpreted through long‑run frequencies of events.  
+- **Frequentist**: Parameters are fixed but unknown, and probability is interpreted through long‑run frequencies of events.
 - **Bayesian**: Parameters are random variables with specified distributions, and probabilities reflect degrees of belief.
 
 ## Key Takeaways
 
-- **Foundational Concept**: Bayes’ Theorem isn’t just a formula; it’s a philosophical shift that emphasizes updating beliefs in light of evidence.  
-- **Ubiquitous in Data Science**: From classification tasks to real‑time recommender systems, Bayesian thinking permeates modern machine learning and AI.  
+- **Foundational Concept**: Bayes’ Theorem isn’t just a formula; it’s a philosophical shift that emphasizes updating beliefs in light of evidence.
+- **Ubiquitous in Data Science**: From classification tasks to real‑time recommender systems, Bayesian thinking permeates modern machine learning and AI.
 - **Practical Impact**: By combining prior knowledge with newly observed data, Bayesian methods provide a flexible, interpretable, and robust framework for handling uncertainty—an essential requirement in real‑world data‑driven decision‑making.
 
-* * *
+---
 
 Bayes’ Theorem represents one of the most powerful tools in a data scientist’s toolkit. Its broad range of applications—spanning medical tests, spam filtering, recommendation engines, and A/B testing—attests to its versatility and enduring relevance. Whether you’re building a simple Naive Bayes classifier or exploring complex hierarchical Bayesian models, understanding and applying Bayes’ Theorem can significantly enhance your ability to make informed, data‑driven decisions while explicitly accounting for uncertainty.
 

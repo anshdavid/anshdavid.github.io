@@ -28,8 +28,8 @@ When analyzing real-world data—be it financial time series, engineering measur
 
 Traditionally, introductory probability courses start with a single random variable—describing phenomena like one measurement at a time (e.g., an individual's height, or the outcome of a single die roll). However, real-world problems typically involve multiple measurements:
 
-- **Finance**: A portfolio might contain multiple assets whose returns we track over time. The daily or monthly return of each asset is a random variable, but we also need to understand how they move together (are they positively correlated, negatively correlated, or nearly independent?).  
-- **Healthcare**: A patient's blood pressure, cholesterol level, and blood glucose are distinct measurements, yet they can co-vary in interesting ways.  
+- **Finance**: A portfolio might contain multiple assets whose returns we track over time. The daily or monthly return of each asset is a random variable, but we also need to understand how they move together (are they positively correlated, negatively correlated, or nearly independent?).
+- **Healthcare**: A patient's blood pressure, cholesterol level, and blood glucose are distinct measurements, yet they can co-vary in interesting ways.
 - **Marketing and E-Commerce**: A user's behavior might be summarized by page views, session duration, items clicked, or items purchased. Analyzing them independently ignores important cross-relationships that could predict future behavior.
 
 In all these scenarios, we gather data across multiple variables, creating an inherently multidimensional space of possible outcomes. **Random vectors** formalize this concept by treating each “dimension” as a component of a larger probabilistic entity.
@@ -58,8 +58,8 @@ To describe how a random vector behaves, we use its **joint distribution**. In o
   F_X(x_1, \dots, x_n) = P\bigl(X_1 \le x_1, \dots, X_n \le x_n\bigr).
   $$
 
-- **Joint PMF/PDF**:  
-  - **Discrete**: $\footnotesize \mathbf{P_{X_1, \dots, X_n}(x_1, \dots, x_n)}$.  
+- **Joint PMF/PDF**:
+  - **Discrete**: $\footnotesize \mathbf{P_{X_1, \dots, X_n}(x_1, \dots, x_n)}$.
   - **Continuous**: $\footnotesize \mathbf{f_{X_1, \dots, X_n}(x_1, \dots, x_n)}$.
 
 ## 2.2 Marginal Distributions
@@ -74,8 +74,8 @@ Marginals show individual behavior, but not co-movement.
 
 ## 2.3 Why Joint Distributions Matter
 
-1. Capture correlations (stocks, health indicators).  
-2. Underlie multivariate regression, PCA, Bayesian networks.  
+1. Capture correlations (stocks, health indicators).
+2. Underlie multivariate regression, PCA, Bayesian networks.
 3. Essential for simulation and generative models.
 
 ---
@@ -98,7 +98,7 @@ $$
 
 ## 3.2 Applications
 
-- Regression models: $\footnotesize \mathbf{E[Y \mid X]}$.  
+- Regression models: $\footnotesize \mathbf{E[Y \mid X]}$.
 - Classification: $\footnotesize \mathbf{P(\text{Class} \mid \text{Features})}$.
 
 ## 3.3 Chain Rule
@@ -129,33 +129,33 @@ Zero correlation ≠ independence. Independence demands full factorization.
 
 ## 4.4 Applications
 
-- Naive Bayes classifiers.  
-- Simplified finance risk models.  
+- Naive Bayes classifiers.
+- Simplified finance risk models.
 - Experimental design.
 
 ---
 
 # 5. Extended Topics
 
-- **Conditional Independence**: independence given a third variable.  
-- **Correlation & Partial Correlation**: controlling for confounders.  
-- **Graphical Models**: Bayesian networks, Markov random fields.  
+- **Conditional Independence**: independence given a third variable.
+- **Correlation & Partial Correlation**: controlling for confounders.
+- **Graphical Models**: Bayesian networks, Markov random fields.
 - **Approximate Independence**: Naive Bayes, PCA.
 
 ---
 
 # 6. Case Studies
 
-- **Medical Diagnosis**: Blood test scores and disease status.  
-- **Finance**: Portfolio correlation structures.  
+- **Medical Diagnosis**: Blood test scores and disease status.
+- **Finance**: Portfolio correlation structures.
 - **Quality Control**: Multivariate control charts.
 
 ---
 
 # 7. Pitfalls
 
-- Simpson’s Paradox.  
-- Spurious correlations.  
+- Simpson’s Paradox.
+- Spurious correlations.
 - Overlooking nonlinear dependencies.
 
 ---
@@ -164,9 +164,9 @@ Zero correlation ≠ independence. Independence demands full factorization.
 
 Random vectors and their distributions are foundational for multivariate analysis:
 
-1. Handle multiple variables in $\footnotesize \mathbf{\mathbb{R}^n}$.  
-2. Joint distributions capture relationships.  
-3. Conditional distributions update beliefs with info.  
+1. Handle multiple variables in $\footnotesize \mathbf{\mathbb{R}^n}$.
+2. Joint distributions capture relationships.
+3. Conditional distributions update beliefs with info.
 4. Independence simplifies but rarely holds perfectly.
 
 By mastering these, you gain a robust toolkit for analyzing real-world multivariate data.

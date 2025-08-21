@@ -1,7 +1,6 @@
 @plugin '@tailwindcss/typography';
 
 @layer base {
-
   /* Katex text color */
   .prose .katex-display {
     @apply text-foreground;
@@ -58,7 +57,6 @@
     }
 
     table {
-
       th,
       td {
         @apply border border-border p-2;
@@ -96,10 +94,7 @@
     pre {
       @apply focus-visible:border-transparent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-dashed;
     }
-
   }
-
-
 
   /* ===== Code Blocks & Syntax Highlighting ===== */
   .astro-code {
