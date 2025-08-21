@@ -28,10 +28,9 @@ while read line; do code --install-extension "$line"; done < extensions.txt
 Run the following for check. good to have push hooks
 
 ```bash
-pnpm install
-pnpm run lint
-pnpm run format:check
-pnpm run build
+npm run lint
+npm run format:check
+npm run build
 npm run preview -- --host 0.0.0.0
 ```
 
