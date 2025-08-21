@@ -1,14 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [ master ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
   pages: write
@@ -27,28 +23,23 @@ jobs:
       - name: "☁️ Checkout repository"
         uses: actions/checkout@v4
 
-      - name: "📦 Install pnpm"
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.11.1
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "pnpm"
+          cache: "npm"
 
       - name: "📦 Install dependencies"
-        run: pnpm install
+        run: npm ci
 
       - name: "🔎 Lint code"
-        run: pnpm run lint
+        run: npm run lint
 
       - name: "📝 Checking code format"
-        run: pnpm run format:check
+        run: npm run format:check
 
       - name: "🚀 Build the project"
-        run: pnpm run build
+        run: npm run build
 
   deploy:
     needs: build
