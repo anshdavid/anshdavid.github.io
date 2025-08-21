@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 anshdavid.com
 =============
 
@@ -13,7 +12,6 @@ anshdavid.com
 
 - `bundle exec jekyll build`
 - `bundle exec jekyll serve`
-=======
 # AstroPaper 📄
 
 ![AstroPaper](public/astropaper-og.jpg)
@@ -194,4 +192,3 @@ Licensed under the MIT License, Copyright © 2025
 ---
 
 Made with 🤍 by [Sat Naing](https://satnaing.dev) 👨🏻‍💻 and [contributors](https://github.com/satnaing/astro-paper/graphs/contributors).
->>>>>>> 1a239db (Initial commit from Astro)
