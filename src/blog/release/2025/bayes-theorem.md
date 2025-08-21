@@ -35,12 +35,12 @@ $$
 
 where:
 
-- \(P(A \mid B)\): **Posterior Probability** — the probability of event \(A\) given the evidence \(B\).  
-- \(P(B \mid A)\): **Likelihood** — the probability of observing \(B\) if \(A\) is true.  
-- \(P(A)\): **Prior Probability** — the initial or existing belief about the probability of \(A\) before seeing \(B\).  
-- \(P(B)\): **Evidence or Marginal Probability** — the total probability of \(B\) occurring under all hypotheses or events.
+- **Posterior Probability** - $\footnotesize \mathbf{P(A \mid B)}$ : the probability of event $\footnotesize \mathbf{A}$ given the evidence $\footnotesize \mathbf{B}$.
+- **Likelihood** - $\footnotesize \mathbf{P(B \mid A)}$: the probability of observing $\footnotesize \mathbf{B}$ if $\footnotesize \mathbf{A}$ is true.  
+- **Prior Probability** - $\footnotesize \mathbf{P(A)}$: the initial or existing belief about the probability of $\footnotesize \mathbf{A}$ before seeing $\footnotesize \mathbf{B}$.  
+- **Evidence or Marginal Probability** - $\footnotesize \mathbf{P(B)}$: the total probability of $\footnotesize \mathbf{B}$ occurring under all hypotheses or events.
 
-In cases where \(A\) can take on multiple mutually exclusive values, \((A_1, A_2, \ldots, A_n)\), we calculate:
+In cases where $\footnotesize \mathbf{A}$ can take on multiple mutually exclusive values, $\footnotesize \mathbf{(A_1, A_2, \ldots, A_n)}$, we calculate:
 
 $$
 P(B) = \sum_{i} \bigl[P(B \mid A_i)\, P(A_i)\bigr].
