@@ -1,5 +1,6 @@
 ---
 title: "Bayes’ Theorem — A Small Introduction"
+author: Ansh David
 description: "A concise, practical primer on Bayes’ Theorem: statement, formula, derivation, and real-world uses in testing, spam filtering, A/B tests, recommenders, and ML."
 pubDatetime: 2025-01-13T12:45:00+05:30
 slug: bayes-theorem-introduction

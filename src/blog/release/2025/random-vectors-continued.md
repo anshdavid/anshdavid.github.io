@@ -1,7 +1,7 @@
 ---
 title: "Random Vectors Continued..."
 subtitle: "Sum, Covariance, Correlation and Limit Theorem"
-author: anshdavid
+author: Ansh David
 pubDatetime: 2025-02-24T07:15:00Z
 slug: random-vectors-continued
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Random Vectors"
-author: anshdavid
+author: Ansh David
 pubDatetime: 2025-02-15T07:15:00Z
 slug: introduction-to-random-vectors
 featured: false
