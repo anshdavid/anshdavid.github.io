@@ -56,13 +56,13 @@ $$
    P(B \mid A) = \frac{P(A \cap B)}{P(A)}.
    $$
 
-2. **Equate \(P(A \cap B)\) in both expressions**:
+2. **Equate in both expressions**:
 
    $$
    P(A \cap B) = P(A \mid B)\, P(B) = P(B \mid A)\, P(A).
    $$
 
-3. **Rearrange to isolate \(P(A \mid B)\)**:
+3. **Rearrange to isolate**:
 
    $$
    P(A \mid B) = \frac{P(B \mid A)\, P(A)}{P(B)}.
