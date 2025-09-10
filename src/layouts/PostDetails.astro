@@ -14,7 +14,8 @@ import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
-import BlogComments from "@/components/BlogComments.astro";
+
+import Comments from "@/components/Comments";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -130,7 +131,7 @@ const nextPost =
 
     <ShareLinks />
 
-    <BlogComments />
+    <Comments client:only="react" />
 
     <hr class="my-6 border-dashed" />
 
