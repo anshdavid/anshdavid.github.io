@@ -13,16 +13,10 @@ tags:
   - hivemq
   - iot
   - tutorial
-description: Exploring the principles, challenges, and strategies of data science ethics—covering privacy, bias, transparency, regulations, and best practices for responsible innovation.
+description: Who is this for? Curious engineers and product folks who want to _understand_ how an Eclipse Ditto digital twin talks to a physical/virtual device over MQTT (HiveMQ), without needing the full source code. We'll unpack the concepts and show the exact shapes of the messages Ditto expects.
 ---
 
-**Who is this for?** Curious engineers and product folks who want to _understand_ how an Eclipse Ditto digital twin talks to a physical/virtual device over MQTT (HiveMQ), without needing the full source code. We'll unpack the concepts and show the exact shapes of the messages Ditto expects.
-
-Python code snippets and a docker environment are linked at the end of the post!!
-
----
-
-# What we're building (in plain English)
+> **Python code snippets and a docker environment are linked at the end of the post!!**
 
 We’ll wire up a **digital twin** for a tiny device called **`dt-led`** and a logical
 controller called **`dt-controller`**. The controller tells the LED device: **turn ON/OFF**.
