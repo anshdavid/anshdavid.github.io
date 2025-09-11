@@ -14,10 +14,9 @@ tags:
   - iot
   - tutorial
 description: Exploring the principles, challenges, and strategies of data science ethics—covering privacy, bias, transparency, regulations, and best practices for responsible innovation.
-
 ---
 
-**Who is this for?** Curious engineers and product folks who want to *understand* how an Eclipse Ditto digital twin talks to a physical/virtual device over MQTT (HiveMQ), without needing the full source code. We'll unpack the concepts and show the exact shapes of the messages Ditto expects.
+**Who is this for?** Curious engineers and product folks who want to _understand_ how an Eclipse Ditto digital twin talks to a physical/virtual device over MQTT (HiveMQ), without needing the full source code. We'll unpack the concepts and show the exact shapes of the messages Ditto expects.
 
 Python code snippets and a docker environment are linked at the end of the post!!
 
@@ -29,8 +28,8 @@ We’ll wire up a **digital twin** for a tiny device called **`dt-led`** and a l
 controller called **`dt-controller`**. The controller tells the LED device: **turn ON/OFF**.
 The device acknowledges and **updates its twin state** (the "source of truth" in Ditto).
 
-- **Command path:** Controller → Ditto (HTTP inbox message) → Ditto publishes to MQTT → Device subscribes and acts  
-- **State path:** Device → Ditto (via HTTP *or* MQTT) → Ditto persists twin → Ditto emits twin events (optional MQTT)
+- **Command path:** Controller → Ditto (HTTP inbox message) → Ditto publishes to MQTT → Device subscribes and acts
+- **State path:** Device → Ditto (via HTTP _or_ MQTT) → Ditto persists twin → Ditto emits twin events (optional MQTT)
 
 You’ll meet four core Ditto ideas along the way:
 
@@ -84,16 +83,18 @@ Here is a **minimal, friendly version** of the policy document you’d PUT to Di
     "owner": {
       "subjects": { "nginx:ditto": { "type": "nginx basic auth user" } },
       "resources": {
-        "thing:/":  { "grant": ["READ","WRITE"], "revoke": [] },
-        "policy:/": { "grant": ["READ","WRITE"], "revoke": [] },
-        "message:/":{ "grant": ["READ","WRITE"], "revoke": [] }
+        "thing:/": { "grant": ["READ", "WRITE"], "revoke": [] },
+        "policy:/": { "grant": ["READ", "WRITE"], "revoke": [] },
+        "message:/": { "grant": ["READ", "WRITE"], "revoke": [] }
       }
     },
     "connection": {
-      "subjects": { "connection:hivemq-mqtt": { "type": "Connection to HiveMQ MQTT broker" } },
+      "subjects": {
+        "connection:hivemq-mqtt": { "type": "Connection to HiveMQ MQTT broker" }
+      },
       "resources": {
-        "thing:/":  { "grant": ["READ","WRITE"], "revoke": [] },
-        "message:/":{ "grant": ["READ","WRITE"], "revoke": [] }
+        "thing:/": { "grant": ["READ", "WRITE"], "revoke": [] },
+        "message:/": { "grant": ["READ", "WRITE"], "revoke": [] }
       }
     }
   }
@@ -108,10 +109,10 @@ Here is a **minimal, friendly version** of the policy document you’d PUT to Di
 
 We’ll create two **things**:
 
-1. `org.eclipse.ditto:dt-led`  
-   - `attributes.name = "LED Device"`  
+1. `org.eclipse.ditto:dt-led`
+   - `attributes.name = "LED Device"`
    - `features.status_led.properties.status = "OFF"` (initial state)
-2. `org.eclipse.ditto:dt-controller`  
+2. `org.eclipse.ditto:dt-controller`
    - `attributes.name = "LED Controller"`
 
 Conceptually, the **LED** thing holds state. The **Controller** is stateless and just sends commands.
@@ -131,17 +132,18 @@ Connection settings worth remembering:
 - **`payloadMappings`:** `[{{"mappingId":"ditto"}}]` (so payloads are Ditto Protocol JSON envelopes)
 - **`authorizationContext`:** `[ "connection:hivemq-mqtt" ]` (so the policy entry applies)
 
-
 ## Sources (consuming from device → Ditto)
 
 ```json
 {
-  "sources": [ {
-    "addresses": ["devices/#"],
-    "authorizationContext": ["connection:hivemq-mqtt"],
-    "qos": 1,
-    "payloadMappings": [{"mappingId": "ditto"}]
-  } ]
+  "sources": [
+    {
+      "addresses": ["devices/#"],
+      "authorizationContext": ["connection:hivemq-mqtt"],
+      "qos": 1,
+      "payloadMappings": [{ "mappingId": "ditto" }]
+    }
+  ]
 }
 ```
 
@@ -151,21 +153,20 @@ Connection settings worth remembering:
 
 ```json
 {
-  "targets": [ {
-    "address": "devices/{{ thing:id }}",
-    "topics": [
-      "_/_/things/live/messages",
-      "_/_/things/twin/events"
-    ],
-    "authorizationContext": ["connection:hivemq-mqtt"],
-    "qos": 1,
-    "payloadMappings": [{"mappingId": "ditto"}]
-  } ]
+  "targets": [
+    {
+      "address": "devices/{{ thing:id }}",
+      "topics": ["_/_/things/live/messages", "_/_/things/twin/events"],
+      "authorizationContext": ["connection:hivemq-mqtt"],
+      "qos": 1,
+      "payloadMappings": [{ "mappingId": "ditto" }]
+    }
+  ]
 }
 ```
 
 - When Ditto routes a **live message** to a device, it publishes a Ditto Protocol envelope to the MQTT topic:  
-  **`devices/<thing:id>`** (for example: `devices/org.eclipse.ditto:dt-led`).  
+  **`devices/<thing:id>`** (for example: `devices/org.eclipse.ditto:dt-led`).
 - When a **twin event** occurs, Ditto can also emit it to the same base address (using the configured `topics`).
 
 ---
@@ -192,7 +193,7 @@ Ditto **routes** this as a **live message** to MQTT target `devices/org.eclipse.
     "correlation-id": "..."
   },
   "path": "/",
-  "value": {"status":"ON", "source_thing":"org.eclipse.ditto:dt-controller"}
+  "value": { "status": "ON", "source_thing": "org.eclipse.ditto:dt-controller" }
 }
 ```
 
@@ -210,7 +211,7 @@ curl -u ditto:ditto -H "Content-Type: application/json" -X PUT   'http://localho
 
 **B) MQTT publish (Ditto Protocol)**
 
-- Publish to broker topic: `devices/org.eclipse.ditto:dt-led/twin`  
+- Publish to broker topic: `devices/org.eclipse.ditto:dt-led/twin`
 - Payload (Ditto Protocol envelope telling Ditto to modify the twin):
 
 ```json
@@ -222,7 +223,7 @@ curl -u ditto:ditto -H "Content-Type: application/json" -X PUT   'http://localho
     "correlation-id": "led-{timestamp}"
   },
   "path": "/features/status_led/properties",
-  "value": {"status": "ON"}
+  "value": { "status": "ON" }
 }
 ```
 
@@ -232,42 +233,42 @@ Ditto applies the update; anyone watching the twin gets **events**. With our con
 
 # Observability & sanity checks
 
-- **Check the connection:** `GET /api/2/connections/hivemq-mqtt` → status should be **OPEN** and **connected**.  
-- **Watch the twin:** `GET /api/2/things/org.eclipse.ditto:dt-led` → feature `status_led.properties.status` should reflect the latest value.  
+- **Check the connection:** `GET /api/2/connections/hivemq-mqtt` → status should be **OPEN** and **connected**.
+- **Watch the twin:** `GET /api/2/things/org.eclipse.ditto:dt-led` → feature `status_led.properties.status` should reflect the latest value.
 - **MQTT introspection:** Use a generic MQTT client to subscribe to `devices/#` and **see** messages coming/going.
 
 ---
 
 # Troubleshooting
 
-| Symptom | Likely Cause | What to check |
-|---|---|---|
-| `401 Unauthorized` on HTTP | Wrong basic‑auth | Use `ditto:ditto` (demo) or your creds; confirm you hit the correct `/api/2` base path |
-| `403` from Ditto | Policy denies the action | Ensure policy grants `READ/WRITE` on `thing:/` and `message:/` for both `nginx:ditto` and `connection:hivemq-mqtt` |
-| Ditto connection stuck `CLOSED` | Broker not reachable or wrong `uri` | Is the broker at `tcp://hivemq:1883` (inside Docker) or `tcp://localhost:1883` (host)? Firewall? |
-| Device doesn't get commands | Wrong MQTT topic | Device must subscribe to `devices/{{ thing:id }}` (e.g., `devices/org.eclipse.ditto:dt-led`) |
-| Device publishes but Ditto ignores it | Missing `ditto` payload mapping | Ensure both `sources` and `targets` include `payloadMappings: [{{"mappingId":"ditto"}}]` |
-| Twin doesn't change | Wrong Ditto Protocol `path` | For our LED: `/features/status_led/properties` is the path to modify |
-| No twin events on MQTT | Targets `topics` missing `twin/events` | Add `"_/_/things/twin/events"` to the connection `targets.topics` |
+| Symptom                               | Likely Cause                           | What to check                                                                                                      |
+| ------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `401 Unauthorized` on HTTP            | Wrong basic‑auth                       | Use `ditto:ditto` (demo) or your creds; confirm you hit the correct `/api/2` base path                             |
+| `403` from Ditto                      | Policy denies the action               | Ensure policy grants `READ/WRITE` on `thing:/` and `message:/` for both `nginx:ditto` and `connection:hivemq-mqtt` |
+| Ditto connection stuck `CLOSED`       | Broker not reachable or wrong `uri`    | Is the broker at `tcp://hivemq:1883` (inside Docker) or `tcp://localhost:1883` (host)? Firewall?                   |
+| Device doesn't get commands           | Wrong MQTT topic                       | Device must subscribe to `devices/{{ thing:id }}` (e.g., `devices/org.eclipse.ditto:dt-led`)                       |
+| Device publishes but Ditto ignores it | Missing `ditto` payload mapping        | Ensure both `sources` and `targets` include `payloadMappings: [{{"mappingId":"ditto"}}]`                           |
+| Twin doesn't change                   | Wrong Ditto Protocol `path`            | For our LED: `/features/status_led/properties` is the path to modify                                               |
+| No twin events on MQTT                | Targets `topics` missing `twin/events` | Add `"_/_/things/twin/events"` to the connection `targets.topics`                                                  |
 
 ---
 
 # Production hardening - beyond the demo
 
-- **TLS for MQTT** (`ssl://...`) and **mutual auth** between broker and Ditto.  
-- Use **fine‑grained Policies** (avoid global `thing:/` grants; scope to your things).  
-- Rotate secrets; avoid shipping the `ditto:ditto` demo user.  
-- Define **consistent topic conventions** (`devices/<thing:id>[/...]`) and keep them stable.  
-- Validate **payload schemas** for your business domain (e.g., restrict `status` to `ON|OFF`).  
+- **TLS for MQTT** (`ssl://...`) and **mutual auth** between broker and Ditto.
+- Use **fine‑grained Policies** (avoid global `thing:/` grants; scope to your things).
+- Rotate secrets; avoid shipping the `ditto:ditto` demo user.
+- Define **consistent topic conventions** (`devices/<thing:id>[/...]`) and keep them stable.
+- Validate **payload schemas** for your business domain (e.g., restrict `status` to `ON|OFF`).
 - Add **observability** (Ditto connection metrics, broker metrics, dead‑letter topics for bad envelopes).
 
 ---
 
 # Where to go next
 
-- Replace `status_led` with your real features (sensors/actuators).  
-- Add **desiredProperties** to let cloud apps *request* future state and have devices converge.  
-- Use **policies per device** for least privilege.  
+- Replace `status_led` with your real features (sensors/actuators).
+- Add **desiredProperties** to let cloud apps _request_ future state and have devices converge.
+- Use **policies per device** for least privilege.
 - Emit **twin events** to analytics pipelines (via the same MQTT bridge or Kafka).
 
 ---
@@ -277,26 +278,26 @@ Ditto applies the update; anyone watching the twin gets **events**. With our con
 Add the following HiveMQ service to the Docker Compose file in the Ditto repository on GitHub:
 
 ```yaml file="docker-compose.yaml"
-  # HiveMQ MQTT broker (Community Edition)
-  hivemq:
-    image: hivemq/hivemq-ce:latest
-    deploy:
-      resources:
-        limits:
-          memory: 512m
-    networks:
-      default:
-        aliases: [hivemq]
-    ports:
-      # - 8181:8080
-      - 1883:1883   # MQTT
-    logging:
-      options: { max-size: 50m }
-  # If you prefer HiveMQ Enterprise Trial with Control Center UI, use:
-  # image: hivemq/hivemq4:latest
-  # ports:
-  #   - "1883:1883"   # MQTT
-  #   - "8082:8080"   # Control Center UI available at http://localhost:8082
+# HiveMQ MQTT broker (Community Edition)
+hivemq:
+  image: hivemq/hivemq-ce:latest
+  deploy:
+    resources:
+      limits:
+        memory: 512m
+  networks:
+    default:
+      aliases: [hivemq]
+  ports:
+    # - 8181:8080
+    - 1883:1883 # MQTT
+  logging:
+    options: { max-size: 50m }
+# If you prefer HiveMQ Enterprise Trial with Control Center UI, use:
+# image: hivemq/hivemq4:latest
+# ports:
+#   - "1883:1883"   # MQTT
+#   - "8082:8080"   # Control Center UI available at http://localhost:8082
 ```
 
 **Python examples are available in this GitHub Gist**
@@ -304,4 +305,4 @@ Add the following HiveMQ service to the Docker Compose file in the Ditto reposit
 
 ---
 
-*If this post saved you a few hours, share it or drop a ⭐ on your internal knowledge base!*
+_If this post saved you a few hours, share it or drop a ⭐ on your internal knowledge base!_
