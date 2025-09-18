@@ -12,9 +12,9 @@ export const SITE = {
   showArchives: true,
   showBackButton: true, // show back button in post detail
   editPost: {
-    enabled: true,
+    enabled: false,
     text: "Edit page",
-    url: "https://github.com/satnaing/astro-paper/edit/main/",
+    url: "https://github.com/anshdavid/anshdavid.github.io/tree/master/src/blog",
   },
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
