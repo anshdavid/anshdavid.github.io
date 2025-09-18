@@ -1,7 +1,7 @@
 ---
 title: Advanced Context Engineering in Practice - Part 2
 author: Ansh David
-pubDatetime: 2025-09-18T07:18:00Z
+pubDatetime: 2025-09-18T07:16:40Z
 featured: false
 draft: false
 tags:
