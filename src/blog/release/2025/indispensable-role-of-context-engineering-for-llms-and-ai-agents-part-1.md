@@ -7,8 +7,8 @@ draft: false
 tags:
   - llm
   - rag
-  - ai agents
-  - context engineering
+  - ai-agents
+  - context-engineering
 description: Why providing the right context to large language models and AI agents is critical for reliable, advanced AI systems.
 ---
 
