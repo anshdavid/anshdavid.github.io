@@ -5,10 +5,10 @@ pubDatetime: 2025-09-18T07:16:40Z
 featured: false
 draft: false
 tags:
- - llm
- - rag
- - ai-agents
- - context-engineering
+  - llm
+  - rag
+  - ai-agents
+  - context-engineering
 
 description: How can we avoid these pitfalls and build robust AI agents? Through hard-won experience, practitioners have distilled a couple of core principles for context engineering.
 ---
@@ -22,7 +22,6 @@ How can we avoid these pitfalls and build robust AI agents? Through hard-won exp
 2. **Actions Carry Implicit Decisions**: Every action an agent takes is based on a host of implicit decisions and assumptions. If different parts of the system make conflicting decisions, the end result will be bad. Therefore, the architecture must prevent or reconcile conflicting decisions. In practice this often means sequencing tasks rather than having agents work in isolation on potentially overlapping decisions. As a rule, conflicting assumptions should be resolved immediately by the system design, not left to be discovered only after outputs clash.
 
 These principles might seem abstract, but they essentially argue for coherence in an agent's process: all parts working from the same understanding, and no part making unchecked decisions that violate another's. In fact, these guidelines are so critical that one expert advises to "**by default rule out any agent architectures that don't abide by them.**"
-
 
 ## Advanced Context Engineering in Practice
 
@@ -60,7 +59,6 @@ Earlier we cautioned against general multi-agent free-for-alls. However, using s
 
 The key is that the **sub-agent's work is kept completely separate from the main agent's context**. Claude's primary agent doesn't dump the sub-agent's entire exploration into its own prompt history. It only receives the succinct answer or relevant snippet that was needed. By doing this, they avoid cluttering the main context with a lot of intermediate noise. The sub-agent essentially functions as a focused tool, it uses its own context to dig up answers, then hands just the answer back. This way, Claude Code extends its capabilities without polluting its long-term context or running multiple decision-makers in parallel. Notably, Claude never has two agents writing code at the same time; any coding is done by the main agent sequentially. This avoids the conflicting decisions issue, adhering to our principles above. The benefit of such isolated sub-agents is primarily **context management**: the investigative work doesn't bloat the main conversation, so the agent can have longer, productive sessions before hitting limits.
 
-Finally, for truly **long-duration tasks**, researchers are exploring automated context compression using a dedicated LLM. In this pattern, you introduce a secondary model whose sole job is to take a huge dialogue or action history and summarize it into a much shorter form, preserving key details, decisions, and milestones. The main agent can periodically call on this "compression model" to distill its memory and then carry on with a fresh context window that includes the compressed summary. This is still an emerging area, getting a model to reliably extract just the right information to keep is hard, and if it drops an important detail, the agent may lose something crucial. But it has been prototyped; for example, teams at Cognition have fine-tuned smaller models to compress contexts for their agents. With a good compression system, they've managed to run agents effectively with context histories far beyond the normal limits. 
-
+Finally, for truly **long-duration tasks**, researchers are exploring automated context compression using a dedicated LLM. In this pattern, you introduce a secondary model whose sole job is to take a huge dialogue or action history and summarize it into a much shorter form, preserving key details, decisions, and milestones. The main agent can periodically call on this "compression model" to distill its memory and then carry on with a fresh context window that includes the compressed summary. This is still an emerging area, getting a model to reliably extract just the right information to keep is hard, and if it drops an important detail, the agent may lose something crucial. But it has been prototyped; for example, teams at Cognition have fine-tuned smaller models to compress contexts for their agents. With a good compression system, they've managed to run agents effectively with context histories far beyond the normal limits.
 
 <u>_There's still a limit eventually, and designing "infinite" context management is an open research question, but these approaches push the boundaries of how long and complex an AI task can be without losing coherence._</u>
