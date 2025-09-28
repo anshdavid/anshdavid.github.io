@@ -13,6 +13,14 @@ tags:
 description: How can we avoid these pitfalls and build robust AI agents? Through hard-won experience, practitioners have distilled a couple of core principles for context engineering.
 ---
 
+| Part     | Title                                                                          |
+| -------- | ------------------------------------------------------------------------------ |
+| Part - 1 | [Indispensable Role of Context Engineering](https://anshdavid.com/posts/2025/indispensable-role-of-context-engineering-for-llms-and-ai-agents-part-1/)                   |
+| Part - 2 | [Advanced Context Engineering in Practice](https://anshdavid.com/posts/2025/advanced-context-engineering-in-practice-part-2/)                                           |
+| Part - 3 | [The Future is Context-Driven](https://anshdavid.com/posts/2025/the-future-is-context-driven-part-3/)                                                       |
+
+Continuing from [Part 1](https://anshdavid.com/posts/2025/indispensable-role-of-context-engineering-for-llms-and-ai-agents-part-1/), we explored why context engineering is critical for building reliable AI agents and the common pitfalls of poor context management. In this part, we'll dive into practical strategies and architectures that embody effective context engineering principles to create robust, capable AI systems.
+
 ## The Core Principles of Context Engineering
 
 How can we avoid these pitfalls and build robust AI agents? Through hard-won experience, practitioners have distilled a couple of core principles for context engineering:
