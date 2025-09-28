@@ -13,14 +13,13 @@ tags:
 description: Building AI agents today feels a bit like web development before the advent of modern frameworks - we're discovering fundamental patterns that will likely become standard.
 ---
 
-| Part     | Title                                                                          |
-| -------- | ------------------------------------------------------------------------------ |
-| Part - 1 | [Indispensable Role of Context Engineering](https://anshdavid.com/posts/2025/indispensable-role-of-context-engineering-for-llms-and-ai-agents-part-1/)                   |
-| Part - 2 | [Advanced Context Engineering in Practice](https://anshdavid.com/posts/2025/advanced-context-engineering-in-practice-part-2/)                                           |
-| Part - 3 | [The Future is Context-Driven](https://anshdavid.com/posts/2025/the-future-is-context-driven-part-3/)                                                       |
+| Part     | Title                                                                                                                                                  |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Part - 1 | [Indispensable Role of Context Engineering](https://anshdavid.com/posts/2025/indispensable-role-of-context-engineering-for-llms-and-ai-agents-part-1/) |
+| Part - 2 | [Advanced Context Engineering in Practice](https://anshdavid.com/posts/2025/advanced-context-engineering-in-practice-part-2/)                          |
+| Part - 3 | [The Future is Context-Driven](https://anshdavid.com/posts/2025/the-future-is-context-driven-part-3/)                                                  |
 
 Finding reliable, efficient, and capable AI agents remains a challenging endeavor in 2025. As explored in [Part 1](https://anshdavid.com/posts/2025/indispensable-role-of-context-engineering-for-llms-and-ai-agents-part-1/) and [Part 2](https://anshdavid.com/posts/2025/advanced-context-engineering-in-practice-part-2/), the key to overcoming these challenges lies in mastering context engineering. By thoughtfully managing the information we provide to LLMs and AI agents, we can unlock their full potential.
-
 
 **Context engineering is rapidly emerging as one of those standards** for serious, production-grade AI systems. Just as React introduced a philosophy that now underpins most web apps, a context-centric philosophy is taking hold in AI. The idea that an agent must manage its context intelligently (and that we, as engineers, must design for that) will become a basic assumption in AI development.
 
