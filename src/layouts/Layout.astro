@@ -136,13 +136,12 @@ const structuredData = {
     <script
       is:inline
       src="https://www.googletagmanager.com/gtag/js?id=G-E34EZGC64L"></script>
-    <script is:inline>
+    <script is:inline type="text/partytown">
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
+      function gtag() {dataLayer.push(arguments);}
+
+      gtag("js", new Date());
       gtag("config", "G-E34EZGC64L");
     </script>
 
