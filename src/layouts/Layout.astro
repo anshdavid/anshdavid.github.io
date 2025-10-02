@@ -135,12 +135,11 @@ const structuredData = {
     <!-- Google tag (gtag.js) -->
     <script
       is:inline
-      async
       src="https://www.googletagmanager.com/gtag/js?id=G-E34EZGC64L"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args) {
-        dataLayer.push(args);
+      function gtag() {
+        dataLayer.push(arguments);
       }
       gtag("js", new Date());
 
