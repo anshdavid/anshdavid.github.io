@@ -4,7 +4,7 @@ subtitle: A step‑by‑step, code‑light walkthrough for understanding policie
 author: Ansh David
 pubDatetime: 2025-09-10T23:15:00-05:00
 slug: eclipse-ditto-hivemq-mqtt
-featured: true
+featured: false
 draft: false
 tags:
   - digital-twin
