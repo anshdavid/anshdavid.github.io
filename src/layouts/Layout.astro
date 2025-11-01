@@ -132,16 +132,24 @@ const structuredData = {
 
     <script is:inline src="/toggle-theme.js"></script>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics (gtag.js) for Partytown -->
     <script
       is:inline
-      src="https://www.googletagmanager.com/gtag/js?id=G-E34EZGC64L"></script>
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-E34EZGC64L"
+      async></script>
     <script is:inline type="text/partytown">
       window.dataLayer = window.dataLayer || [];
-
-      function gtag() {dataLayer.push(arguments);}
-
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag("js", new Date());
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
       gtag("config", "G-E34EZGC64L");
     </script>
 

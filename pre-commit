@@ -11,14 +11,21 @@ echo "📝 Running lint check..."
 npm run lint
 if [ $? -ne 0 ]; then
     echo "❌ Lint check failed. Please fix the issues above."
-    exit 1
 fi
 
-# Run format check
+# Run formatting check
 echo "🎨 Checking code formatting..."
 npm run format:check
 if [ $? -ne 0 ]; then
-    echo "❌ Code formatting check failed."
+    echo "❌ Code formatting check found errors."
+fi
+
+# Run formatting
+echo "🎨 Running code formatting..."
+npm run format
+npm run format:check
+if [ $? -ne 0 ]; then
+    echo "❌ Code formatting failed."
     echo "💡 Run 'npm run format' to auto-fix formatting issues."
     exit 1
 fi
