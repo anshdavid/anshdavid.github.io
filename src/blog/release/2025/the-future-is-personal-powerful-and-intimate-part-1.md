@@ -19,7 +19,7 @@ description: Thanks to rapid advances in hardware and model efficiency, we’re 
 | Part     | Title                                                              |
 | -------- | ------------------------------------------------------------------ |
 | Part - 1 | [The Future of AI is Personal, Powerful, and Intimate - Part 1][1] |
-| Part - 2 | Cloud and Edge in Harmony - Part 2                                 |
+| Part - 2 | [Cloud and Edge in Harmony - Part 2][2]                            |
 | Part - 3 | New Marketplace for Personal AI Agents - Part 3                    |
 
 For years, the cutting edge of AI has lived in massive cloud datacenters. Vast server farms crunching data for services like voice assistants and chatbots. But the next era of AI won’t be confined to distant clouds, it will be intimate and immediate, running right on the devices around us. This future marries the best of both worlds, the brawn of big-cloud computing for heavy lifting, and the brains of personalized AI at the edge for privacy and responsiveness. As one industry leader put it, **"We stand on the brink of an era where edge AI will reshape our world in a profound way."**, _<u>Salil Raje, SVP of adaptive and embedded computing at AMD</u>_.
@@ -48,6 +48,5 @@ Behind this trend is a convergence of **more efficient models and more powerful 
 
 Tech companies are envisioning **one-person-one-model** scenarios. 8 billion people, 8 billion personal AIs where each of us owns an AI that **"mirrors your voice, your style, and everything about you** not owned by big tech. In practical terms, this could mean your AI health coach knows your exact fitness history and diet, your AI tutor knows which learning methods click best for you, and your AI assistant knows your family members and routines. Personal AIs can remember context indefinitely and truly mold themselves to fit into your life. The result is an AI experience that feels less like a one-size-fits-all product and more like a **bespoke service** or even a partner that _<u>gets</u>_ you. Companies and startups are racing to enable this, from custom language models you can fine-tune on your own data, to tools that let you set the personality of your AI agent. Generative AI is unlocking **colossal opportunities for startups** by making it possible to build scalable online experiences that replicate the benefits of being in person. In short, personal AI means AI that works for you, not just on you.
 
----
-
 [1]: https://anshdavid.com/posts/2025/the-future-is-personal-powerful-and-intimate-part-1/
+[2]: https://anshdavid.com/posts/2025/cloud-and-edge-in-harmony-part-2/
